@@ -5,10 +5,12 @@ namespace CM.Units
 {
     public class Inventory : MonoBehaviour
     {
+        [SerializeField]
         private Resource[] _resources = new Resource[6];
         
         public int Capacity => _resources.Length;
         public int Contents => _resources.Count(x => x != null);
+        public bool IsFull => Contents == Capacity;
 
         public bool TryAddResource(Resource resource)
         {
@@ -51,7 +53,7 @@ namespace CM.Units
                 _resources[index] = null;
 
                 if (resource)
-                    Destroy(resource.gameObject);
+                    resource.transform.SetParent(stockpile.transform);
             }
         }
     }

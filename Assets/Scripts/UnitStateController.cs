@@ -42,6 +42,9 @@ namespace CM.Units
         
         private void Update()
         {
+            if (Time.frameCount % 30 != 0)
+                return;
+            
             switch (_state)
             {
                 case Enum_States.Idle:
@@ -137,6 +140,8 @@ namespace CM.Units
             var weapon = _controller.GetAttachment(Attachment.Enum_AttachmentType.Weapon).attachedEquipment as Weapon;
             _targetResourceSO = weapon.resource;
             
+            Debug.Log("Looking for resource (" + _targetResourceSO.name + ")");
+            
             for (int i = 0; i < PrunedAndSortedColliders.Count; i++)
             {
                 var hit = PrunedAndSortedColliders[i];
@@ -152,6 +157,8 @@ namespace CM.Units
                 if (resource.SO != _targetResourceSO)
                     continue;
 
+                Debug.Log("Found resource (" + target + ")");
+                
                 target = resource.gameObject;
                 _state = Enum_States.PickUpResource;
                 _controller.MoveTo(resource.transform.position, OnArrived);
@@ -177,6 +184,10 @@ namespace CM.Units
                 var hit = colliders[i];
 
                 var rb = hit.attachedRigidbody;
+                
+                if (!rb)
+                    continue;
+                
                 if (!rb.TryGetComponent(out ResourceNode resource)) 
                     continue;
                 
@@ -223,18 +234,23 @@ namespace CM.Units
 
             if (_state == Enum_States.PickUpResource)
             {
+                Debug.Log("Picking up resource (" + target + ")");
+                
                 var resource = target.GetComponent<Resource>();
                 
                 _inventory.TryAddResource(resource);
 
-                if (_inventory.Contents > 0)
+                if (!_inventory.IsFull)
                     _state = Enum_States.Searching;
                 else
                 {
                     _state = Enum_States.Returning;
+                    
                     Stockpile.stockpiles.TryGetValue(_targetResourceSO, out var stockpile);
+                    target = stockpile.gameObject;
                     
                     _controller.MoveTo(stockpile.transform.position, OnArrived);
+                    Debug.Log("Returng to stockpile (" + _targetResourceSO.name + ")");
                 }
 
                 return;

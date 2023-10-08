@@ -24,6 +24,5 @@ public class Equipment : MonoBehaviour
 
     public virtual void Use(GameObject target)
     {
-        Debug.Log($"Using {gameObject.name}");
     }
 }
