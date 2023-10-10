@@ -21,7 +21,7 @@ public class HealthAnimation : MonoBehaviour
 
     private void OnDamaged(float damage)
     {
-        var force = transform.localScale * 1.15f;
+        var force = transform.localScale * .25f;
         var duration = 0.175f;
         
         ShortcutExtensions.DOPunchScale(transform, force, duration);

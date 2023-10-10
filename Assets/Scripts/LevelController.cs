@@ -1,39 +1,12 @@
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
-[CustomEditor(typeof(LevelController))]
-public class LevelControllerEditor : Editor
-{
-    private LevelController Target;
-    private void OnEnable()
-    {
-        Target = target as LevelController;
-    }
-
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-        
-        if (GUILayout.Button("Populate Level"))
-        {
-            Target.PopulateLevel();
-        }
-
-        if (GUILayout.Button("Clean Up"))
-        {
-            Target.CleanUp();
-        }
-    }
-}
 public class LevelController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _tree;
+    private ResourceSO[] _resources;
 
-    [SerializeField]
-    private GameObject _rock;
-    
     [SerializeField]
     private Vector2 _levelSize = new(10, 10);
 
@@ -45,36 +18,28 @@ public class LevelController : MonoBehaviour
 
     [SerializeField]
     private float _maxDistance;
+    
+    private List<GameObject> items = new();
 
     public void PopulateLevel()
     {
         var treeCount = Mathf.RoundToInt(_levelSize.x * _levelSize.y * density);
         var rockCount = Mathf.RoundToInt(_levelSize.x * _levelSize.y * density);
         
-        var items = new List<GameObject>(treeCount + rockCount);
-        
-        for (int i = 0; i < treeCount; i++)
+        var itemCount = treeCount + rockCount;
+        items = new List<GameObject>(itemCount);
+
+        for (int i = 0; i < itemCount; i++)
         {
-            var x = Random.Range(-_levelSize.x / 2, _levelSize.x / 2);
-            var z = Random.Range(-_levelSize.y / 2, _levelSize.y / 2);
-            
-            var tree = PrefabUtility.InstantiatePrefab(_tree, transform) as GameObject;
-            tree.transform.position = new Vector3(x, 0f, z);
-            tree.name = "Tree #" + i;
-            items.Add(tree);
-        }
-        
-        for (int i = 0; i < rockCount; i++)
-        {
-            var x = Random.Range(-_levelSize.x / 2, _levelSize.x / 2);
-            var z = Random.Range(-_levelSize.y / 2, _levelSize.y / 2);
-            
-            var rock = PrefabUtility.InstantiatePrefab(_rock, transform) as GameObject;
-            rock.transform.position = new Vector3(x, 0f, z);
-            rock.name = "Rock #" + i;
-            items.Add(rock);
+            SpawnResource(_resources[i % _resources.Length]);
         }
 
+        EnsureEvenSpread();
+    }
+
+    // TODO: Incorporate a Poisson Disc Sampling algorithm
+    private void EnsureEvenSpread()
+    {
         var iterations = 0;
         var maxIterations = _iterations;
         while (iterations < maxIterations)
@@ -110,6 +75,17 @@ public class LevelController : MonoBehaviour
             
             iterations++;
         }
+    }
+
+    private void SpawnResource(ResourceSO resourceSO)
+    {
+        var x = Random.Range(-_levelSize.x / 2, _levelSize.x / 2);
+        var z = Random.Range(-_levelSize.y / 2, _levelSize.y / 2);
+
+        var resourceNode = ResourceFactory.CreateResourceNode(resourceSO, new Vector3(x, 0, z), transform);
+
+        resourceNode.name = resourceSO.name + transform.position;
+        items.Add(resourceNode.gameObject);
     }
 
     public void CleanUp()

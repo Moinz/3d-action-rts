@@ -191,7 +191,7 @@ namespace CM.Units
                 if (!rb.TryGetComponent(out ResourceNode resource)) 
                     continue;
                 
-                if (resource._resourceData != resourceSO)
+                if (resource._resourceSO != resourceSO)
                     continue;
 
                 target = resource.gameObject;

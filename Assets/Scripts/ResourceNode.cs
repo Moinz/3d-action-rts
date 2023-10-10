@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
@@ -9,8 +10,8 @@ public class ResourceNode : MonoBehaviour
     [SerializeField]
     private Vector2Int _resourceRange = new (1,3);
 
-    [SerializeField]
-    public ResourceSO _resourceData;
+    [FormerlySerializedAs("_resourceData")] [SerializeField]
+    public ResourceSO _resourceSO;
     
     private int _resourceCount; 
     public int ResourceCount => _resourceCount;
@@ -43,7 +44,7 @@ public class ResourceNode : MonoBehaviour
         
         for (int i = 0; i < ResourceCount; i++)
         {
-            var resource = Instantiate(_resourceData.resource, spawnPos, Quaternion.identity);
+            var resource = ResourceFactory.CreateResource(_resourceSO, spawnPos);
             
             resource.Throw(RandomPointInCircle(pos, 2.5f));
         }
