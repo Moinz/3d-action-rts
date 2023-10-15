@@ -23,7 +23,10 @@ public class Weapon : Equipment
 
         var healthModule = target.GetComponent<HealthModule>();
         if (!healthModule)
+        {
+            Debug.Log($"Target has no healthmodule", target);
             return;
+        }
         
         healthModule.Damage(damage);
         
