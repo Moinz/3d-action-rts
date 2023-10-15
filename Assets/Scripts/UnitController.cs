@@ -7,22 +7,52 @@ namespace CM.Units
 {
     public class UnitController : MonoBehaviour
     {
+        public bool _isEnemy;
+        
         [SerializeField]
         private NavMeshAgent _agent;
 
         [SerializeField]
         private Attachment[] _attachments;
 
+        private HealthModule _healthModule;
+        private Inventory _inventory;
+        
         private Action onArrived;
         
         public float vision;
         
         public Action<GameObject> Attack;
         
+        public float interactRange = 2.5f;
+
+
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
+            _healthModule = GetComponent<HealthModule>();
+
+            _inventory = GetComponent<Inventory>();
             _attachments = GetComponentsInChildren<Attachment>();
+        }
+
+        private void OnEnable()
+        {
+            if (_healthModule)
+                _healthModule.OnDeath += OnDeath;
+        }
+
+        private void OnDisable()
+        {
+            if (_healthModule)
+                _healthModule.OnDeath -= OnDeath;
+        }
+
+        private void OnDeath()
+        {
+            _inventory.EjectInventory();
+            
+            gameObject.SetActive(false);
         }
 
         public void MoveTo(Vector3 position, Action onArrived = null)
@@ -55,6 +85,13 @@ namespace CM.Units
             }
 
             return null;
+        }
+
+        public void Stop()
+        {
+            _agent.isStopped = true;
+            
+            onArrived?.Invoke();
         }
     }
 }

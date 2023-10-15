@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -85,6 +84,7 @@ public class LevelController : MonoBehaviour
         var resourceNode = ResourceFactory.CreateResourceNode(resourceSO, new Vector3(x, 0, z), transform);
 
         resourceNode.name = resourceSO.name + transform.position;
+        resourceNode.gameObject.layer = gameObject.layer;
         items.Add(resourceNode.gameObject);
     }
 

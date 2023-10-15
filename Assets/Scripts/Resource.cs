@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Resource : MonoBehaviour
 {
@@ -20,10 +21,12 @@ public class Resource : MonoBehaviour
         _rigidbody.velocity = throwVelocity;
     }
 
-    private void OnCollisionEnter(Collision other)
+    public void ThrowRandom(Vector3 center, float radius)
     {
-        if (other.gameObject.name == "Ground")
-            _rigidbody.isKinematic = true;
+        var point = Random.insideUnitCircle * radius;
+        point = center + new Vector3(point.x, 0f, point.y);
+        
+        Throw(point);
     }
 
     private Vector3 CalculateThrowVelocityFixedApex(Vector3 fromPosition, Vector3 toPosition, float apex)

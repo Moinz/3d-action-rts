@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 public class HealthModule : MonoBehaviour
@@ -38,29 +36,5 @@ public class HealthModule : MonoBehaviour
     public void Heal(float amount)
     {
         _health += amount;
-    }
-}
-
-[CustomEditor(typeof(HealthModule))]
-public class HealthModuleEditor : Editor
-{
-    private HealthModule Target;
-    private float damage = 100;
-
-    private void OnEnable()
-    {
-        Target = target as HealthModule;
-    }
-
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-        
-        damage = EditorGUILayout.FloatField("Damage", damage);
-
-        if (GUILayout.Button("Damage"))
-        {
-            Target.Damage(damage);
-        }
     }
 }

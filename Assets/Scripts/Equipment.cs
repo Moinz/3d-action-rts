@@ -6,7 +6,8 @@ public class Equipment : MonoBehaviour
     public Attachment attachedTo;
     
     public bool IsEquipped => attachedTo != null;
-    
+    public static LayerMask Mask => LayerMask.GetMask("Item");
+
     public bool TryAttach(Attachment attachedTo)
     {
         if (IsEquipped)

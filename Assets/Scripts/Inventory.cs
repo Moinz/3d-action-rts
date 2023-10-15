@@ -31,11 +31,16 @@ namespace CM.Units
         
         public bool TryRemoveResource(Resource resource)
         {
+            if (resource == null)
+                return false;
+            
             for (int i = 0; i < _resources.Length; i++)
             {
                 if (_resources[i] == resource)
                 {
                     _resources[i] = null;
+                    resource.transform.parent = null;
+                    resource.gameObject.SetActive(true);
                     return true;
                 }
             }
@@ -50,10 +55,25 @@ namespace CM.Units
             for (var index = 0; index < _resources.Length; index++)
             {
                 var resource = _resources[index];
-                _resources[index] = null;
-
-                if (resource)
-                    resource.transform.SetParent(stockpile.transform);
+                if (!resource)
+                    return;
+                
+                TryRemoveResource(resource);
+                resource.transform.SetParent(stockpile.transform);
+            }
+        }
+        
+        public void EjectInventory()
+        {
+            for (var index = 0; index < _resources.Length; index++)
+            {
+                var resource = _resources[index];
+                if (!resource)
+                    continue;
+                
+                TryRemoveResource(resource);
+                resource.transform.position += Vector3.up;
+                resource.ThrowRandom(resource.transform.position, 2.5f);
             }
         }
     }
