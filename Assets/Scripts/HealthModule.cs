@@ -37,4 +37,10 @@ public class HealthModule : MonoBehaviour
     {
         _health += amount;
     }
+
+    public void Kill()
+    {
+        _health = 0;
+        OnDeath?.Invoke();
+    }
 }

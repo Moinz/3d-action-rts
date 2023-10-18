@@ -11,6 +11,7 @@ namespace CM.Units
         public int Capacity => _resources.Length;
         public int Contents => _resources.Count(x => x != null);
         public bool IsFull => Contents == Capacity;
+        public int Count(ResourceSO resourceType) => _resources.Count(x => x != null && x.SO == resourceType);
 
         public bool TryAddResource(Resource resource)
         {
@@ -50,13 +51,14 @@ namespace CM.Units
 
         public void DepositResources(Stockpile stockpile)
         {
-            stockpile.Deposit(Contents);
+            var resourceType = stockpile.resource;
+            stockpile.Deposit(Count(resourceType));
 
             for (var index = 0; index < _resources.Length; index++)
             {
                 var resource = _resources[index];
-                if (!resource)
-                    return;
+                if (!resource || resource.SO != resourceType)
+                    continue;
                 
                 TryRemoveResource(resource);
                 resource.transform.SetParent(stockpile.transform);

@@ -21,9 +21,15 @@ namespace CM.Units
         
         [SerializeField]
         private SoldierBrain _soldierBrain;
+
+        [SerializeField]
+        private PlayerBrain _playerBrain;
         
         [SerializeField]
         private bool _isGatherer;
+
+        [SerializeField]
+        private bool _isPlayer;
 
         private void Start()
         {
@@ -32,12 +38,22 @@ namespace CM.Units
 
             _gathererBrain.Initialize(this, _controller);
             _soldierBrain.Initialize(this, _controller);
+            _playerBrain.Initialize(this, _controller);
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
                 _isGatherer = !_isGatherer;
+
+            if (_isPlayer)
+            {
+                if (Time.frameCount % _playerBrain.TickRate != 0)
+                    return;
+                
+                _playerBrain.Tick();
+                return;
+            }
             
             // Gatherer
             if (_isGatherer)

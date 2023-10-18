@@ -5,11 +5,13 @@ public class ResourceFactory : MonoBehaviour
     public static Resource CreateResource(ResourceSO resourceSO, Vector3 position)
     {
         var resource = Instantiate(resourceSO.resource, position, Quaternion.identity);
-
+        
         // TODO: Random Array Index extension
         var visualVariation = resourceSO.gfx_resourceVariations[Random.Range(0, resourceSO.gfx_resourceVariations.Length)]; 
         var visual = Instantiate(visualVariation, resource.transform);
         visual.transform.localPosition = Vector3.zero;
+        
+        InteractionController.SetUpInteractableTriggerCollider(resource);
         
         return resource;
     }
@@ -26,6 +28,8 @@ public class ResourceFactory : MonoBehaviour
         var visualVariation = resourceSO.gfx_resourceNodeVariations[Random.Range(0, resourceSO.gfx_resourceNodeVariations.Length)]; 
         var visual = Instantiate(visualVariation, resource.transform);
         visual.transform.localPosition = Vector3.zero;
+        
+        InteractionController.SetUpInteractableTriggerCollider(resource);
         
         return resource;
     }

@@ -1,12 +1,10 @@
-﻿using System;
+﻿using CM.Units;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class Resource : MonoBehaviour
+public class Resource : MonoBehaviour, IInteractable
 {
-    [FormerlySerializedAs("resourceSO")] [FormerlySerializedAs("resourceData")] [FormerlySerializedAs("_resourceData")] public ResourceSO SO;
-
+    public ResourceSO SO;
     private Rigidbody _rigidbody;
 
     private void Awake()
@@ -48,5 +46,10 @@ public class Resource : MonoBehaviour
         var velocityXZ = displacementXZ / time; //m/s
 
         return velocityXZ + velocityY * (-gravity); //m/s + (s*(m/s^2) = m/s)
+    }
+
+    public void Interact(UnitController unitController)
+    {
+        unitController._inventory.TryAddResource(this);
     }
 }

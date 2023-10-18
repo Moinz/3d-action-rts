@@ -1,6 +1,7 @@
+using CM.Units;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour
+public class Equipment : MonoBehaviour, IInteractable
 {
     public Attachment.Enum_AttachmentType attachmentType;
     public Attachment attachedTo;
@@ -25,5 +26,10 @@ public class Equipment : MonoBehaviour
 
     public virtual void Use(GameObject target)
     {
+    }
+
+    public void Interact(UnitController unitController)
+    {
+        unitController.GetAttachment(attachmentType).TryAttach(this);
     }
 }

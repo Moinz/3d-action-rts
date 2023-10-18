@@ -16,7 +16,7 @@ namespace CM.Units
         private Attachment[] _attachments;
 
         private HealthModule _healthModule;
-        private Inventory _inventory;
+        internal Inventory _inventory;
         
         private Action onArrived;
         

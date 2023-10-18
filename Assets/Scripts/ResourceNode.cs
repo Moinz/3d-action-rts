@@ -1,11 +1,10 @@
-﻿using System.Numerics;
+﻿using CM.Units;
 using UnityEngine;
 using UnityEngine.Serialization;
-using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
 [RequireComponent(typeof(HealthModule))]
-public class ResourceNode : MonoBehaviour
+public class ResourceNode : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private Vector2Int _resourceRange = new (1,3);
@@ -55,5 +54,10 @@ public class ResourceNode : MonoBehaviour
         var point = Random.insideUnitCircle * radius;
         
         return center + new Vector3(point.x, 0f, point.y);
+    }
+
+    public void Interact(UnitController unitController)
+    {
+        _healthModule.Kill();
     }
 }
