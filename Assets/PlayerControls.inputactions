@@ -1,0 +1,60 @@
+{
+    "name": "PlayerControls",
+    "maps": [
+        {
+            "name": "Interaction",
+            "id": "539f9f82-bb5e-457b-9bc3-b6b6947892f6",
+            "actions": [
+                {
+                    "name": "Left Click",
+                    "type": "Button",
+                    "id": "fa15a358-1507-464f-8563-040c26b8c8e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right Click",
+                    "type": "Button",
+                    "id": "ceba20c6-a099-4154-bb86-346cebc18cf5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cbbef36e-7dae-4cba-86ff-8b8ccf16e88b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "RTS",
+                    "action": "Left Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a8cba00-8be8-4c39-b57b-97853ffcefa8",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "RTS",
+                    "action": "Right Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "RTS",
+            "bindingGroup": "RTS",
+            "devices": []
+        }
+    ]
+}
