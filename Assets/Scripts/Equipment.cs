@@ -5,8 +5,9 @@ public class Equipment : MonoBehaviour, IInteractable
 {
     public Attachment.Enum_AttachmentType attachmentType;
     public Attachment attachedTo;
-    
-    public bool IsEquipped => attachedTo != null;
+
+    private bool _isEquipped;
+    public bool IsEquipped => _isEquipped;
     public static LayerMask Mask => LayerMask.GetMask("Item");
 
     public bool TryAttach(Attachment attachedTo)
@@ -15,10 +16,14 @@ public class Equipment : MonoBehaviour, IInteractable
             return false;
         
         this.attachedTo = attachedTo;
+        _isEquipped = true;
 
         transform.SetParent(attachedTo.transform);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+
+        var rb = transform.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
 
         attachedTo._unitController.Attack += Use;
         return true;

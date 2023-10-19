@@ -45,7 +45,7 @@ public class ResourceNode : MonoBehaviour, IInteractable
         {
             var resource = ResourceFactory.CreateResource(_resourceSO, spawnPos);
             
-            resource.Throw(RandomPointInCircle(pos, 2.5f));
+            ResourceFactory.Throw(resource.gameObject, RandomPointInCircle(pos, 2.5f));
         }
     }
     
@@ -58,6 +58,6 @@ public class ResourceNode : MonoBehaviour, IInteractable
 
     public void Interact(UnitController unitController)
     {
-        _healthModule.Kill();
+        unitController.Attack?.Invoke(gameObject);
     }
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
@@ -8,6 +7,9 @@ public class CameraController : MonoBehaviour
 
     [SerializeField]
     private float _speed = 5f;
+
+    [SerializeField]
+    private Vector2 _bounds;
 
     private Camera camera;
     
@@ -44,10 +46,19 @@ public class CameraController : MonoBehaviour
             moveY = map(y, 1 - _deadZone, 1, 0, 1);
 
         transform.position += (forward * moveY + right * moveX) * (_speed * Time.deltaTime);
+        transform.position = Clamp(transform.position);
     }
-    
-    
-// c#
+
+    private Vector3 Clamp(Vector3 transformPosition)
+    {
+        var x = Mathf.Clamp(transformPosition.x, -_bounds.x, _bounds.x);
+        var z = Mathf.Clamp(transformPosition.z, -_bounds.y, _bounds.y);
+
+        return new Vector3(x, transformPosition.y, z);
+    }
+
+
+    // c#
     float map(float s, float a1, float a2, float b1, float b2)
     {
         return b1 + (s-a1)*(b2-b1)/(a2-a1);

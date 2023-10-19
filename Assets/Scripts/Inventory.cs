@@ -62,20 +62,34 @@ namespace CM.Units
                 
                 TryRemoveResource(resource);
                 resource.transform.SetParent(stockpile.transform);
+                resource.GetComponent<Rigidbody>().isKinematic = true;
             }
+        }
+
+        public Resource GetResource(ResourceSO targetResource)
+        {
+            foreach (var resource in _resources)
+            {
+                if (!resource)
+                    continue;
+                
+                if (resource.SO == targetResource)
+                    return resource;
+            }
+
+            return null;
         }
         
         public void EjectInventory()
         {
-            for (var index = 0; index < _resources.Length; index++)
+            foreach (var resource in _resources)
             {
-                var resource = _resources[index];
                 if (!resource)
                     continue;
                 
                 TryRemoveResource(resource);
                 resource.transform.position += Vector3.up;
-                resource.ThrowRandom(resource.transform.position, 2.5f);
+                ResourceFactory.ThrowRandom(resource.gameObject, resource.transform.position, 2.5f);
             }
         }
     }

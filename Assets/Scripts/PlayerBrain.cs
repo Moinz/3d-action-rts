@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace CM.Units
@@ -9,6 +10,15 @@ namespace CM.Units
         private PlayerControls _playerControls;
         
         private IInteractable _interactable;
+        
+        private States _currentState;
+        
+        private enum States
+        {
+            Idle,
+            Moving,
+            Interacting,
+        }
         
         public PlayerBrain(UnitStateController stateController, UnitController unitController)
         {
@@ -29,11 +39,14 @@ namespace CM.Units
                 return;
             
             var hasInteractable = hitInfo.rigidbody.TryGetComponent(out _interactable);
-            
+            _currentState = States.Moving;
             _unitController.MoveTo(hitInfo.point, () =>
             {
-                if (hasInteractable)
-                    _interactable.Interact(_unitController);
+                if (!hasInteractable) 
+                    return;
+                
+                _interactable.Interact(_unitController);
+                _currentState = States.Interacting;
             });
         }
 
@@ -41,14 +54,44 @@ namespace CM.Units
         {
             if (!context.performed)
                 return;
-            
-            
         }
 
         public override int TickRate => 30;
         
         public override void Tick()
         {
+            switch (_currentState)
+            {
+                case States.Idle:
+                    break;
+                case States.Moving:
+                    break;
+                case States.Interacting:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void Idle_State()
+        {
+            
+        }
+
+        private void Idle_Moving()
+        {
+            
+        }
+        
+        private void Idle_Interacting()
+        {
+            if (_interactable == null)
+            {
+                _currentState = States.Idle;
+                return;
+            }
+            
+            _interactable.Interact(_unitController);
         }
 
         public override void Initialize(UnitStateController stateController, UnitController unitController)

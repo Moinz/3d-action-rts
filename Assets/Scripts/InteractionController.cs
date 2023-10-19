@@ -17,6 +17,14 @@ public class InteractionController : MonoBehaviour
             SetUpInteractableTriggerCollider(interactable);
     }
     
+    public static void SetUpInteractableTriggerCollider(GameObject gameObject)
+    {
+        var interactables = gameObject.GetComponentsInChildren<IInteractable>();
+        
+        foreach (var interactable in interactables)
+            SetUpInteractableTriggerCollider(interactable);
+    }
+    
     public static void SetUpInteractableTriggerCollider(IInteractable interactable)
     {
         var interactionCollider = new GameObject("Interaction Collider")

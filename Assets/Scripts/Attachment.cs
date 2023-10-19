@@ -22,6 +22,9 @@ public class Attachment : MonoBehaviour
     private void Awake()
     {
         _unitController = GetComponentInParent<UnitController>();
+        
+        if (HasAttachment)
+            attachedEquipment.TryAttach(this);
     }
     
     public bool TryAttach(Equipment equipment)
