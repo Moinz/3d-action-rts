@@ -25,13 +25,18 @@ public class Weapon : Equipment
         if (!healthModule)
         {
             Debug.Log($"Target has no healthmodule", target);
-            return;
+            goto end;
         }
         
         healthModule.Damage(damage);
         
         _isOnCooldown = true;
         Invoke(nameof(ResetCooldown), attackSpeed);
+        
+        end:
+        
+        if (IsSelected != null)
+            IsSelected.Value = false;
     }
 
     private void ResetCooldown()

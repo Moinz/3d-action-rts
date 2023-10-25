@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResourceFactory : MonoBehaviour
@@ -44,6 +45,7 @@ public class ResourceFactory : MonoBehaviour
         
         Throw(rb, position);
     }
+
     public static void Throw(Rigidbody rb, Vector3 position)
     {
         var throwVelocity = CalculateThrowVelocityFixedApex(rb.position, position, .5f);

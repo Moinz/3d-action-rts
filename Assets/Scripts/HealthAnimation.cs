@@ -5,6 +5,12 @@ public class HealthAnimation : MonoBehaviour
 {
     public HealthModule healthModule;
 
+    [SerializeField]
+    private bool _doColor;
+    
+    [SerializeField]
+    private Color _hurtColor;
+
     public void Initialize(HealthModule hm)
     {
         healthModule = hm;
@@ -25,6 +31,12 @@ public class HealthAnimation : MonoBehaviour
         var duration = 0.175f;
         
         ShortcutExtensions.DOPunchScale(transform, force, duration);
+        
+        if (!_doColor)
+            return;
+        
+        var material = GetComponentInChildren<Renderer>().material;
+        material.DOColor(_hurtColor, "_BaseColor", duration).SetLoops(2, LoopType.Yoyo);
     }
 
     

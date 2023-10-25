@@ -33,7 +33,10 @@ public class Attachment : MonoBehaviour
             return false;
 
         if (attachedEquipment)
-            return false;
+        {
+            attachedEquipment.TryDetach();
+            attachedEquipment = null;
+        }
         
         var successfullAttachment = equipment.TryAttach(this);
         

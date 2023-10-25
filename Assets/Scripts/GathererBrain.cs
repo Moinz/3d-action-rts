@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace CM.Units
 {
-    [System.Serializable]
+    
+    [CreateAssetMenu(menuName = "CM/Behaviors/Brains/Gatherer")]
     public class GathererBrain : Brain
     {
         public GathererBrain(UnitStateController stateController, UnitController unitUnitController)

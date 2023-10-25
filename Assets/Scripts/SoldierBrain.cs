@@ -1,19 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CM.Units
 {
-    [System.Serializable]
+    [CreateAssetMenu(menuName = "CM/Behaviors/Brains/Soldier")]
     public class SoldierBrain : Brain
     {
         public override int TickRate => 10;
-
-        public SoldierBrain(UnitStateController stateController, UnitController unitController)
-        {
-            _stateController = stateController;
-            _unitController = unitController;
-        }
-
+        
         private enum CombatStates
         {
             Patrol,

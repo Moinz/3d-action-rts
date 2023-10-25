@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 [RequireComponent(typeof(HealthModule))]
-public class ResourceNode : MonoBehaviour, IInteractable
+public class ResourceNode : Entity, IInteractable
 {
     [SerializeField]
     private Vector2Int _resourceRange = new (1,3);
@@ -47,8 +47,12 @@ public class ResourceNode : MonoBehaviour, IInteractable
             
             ResourceFactory.Throw(resource.gameObject, RandomPointInCircle(pos, 2.5f));
         }
+        
+        if (IsSelected != null)
+            IsSelected.Value = false;
     }
     
+    // TODO: Move this to a utility class.
     private Vector3 RandomPointInCircle(Vector3 center, float radius)
     {
         var point = Random.insideUnitCircle * radius;

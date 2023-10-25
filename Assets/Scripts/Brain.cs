@@ -15,8 +15,7 @@ namespace CM.Units
             get => _stateController.target;
             set => _stateController.target = value;
         }
-        
-        [SerializeField] 
+
         public LayerMask searchMask;
         
         public abstract void Tick();

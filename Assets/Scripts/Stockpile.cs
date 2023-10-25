@@ -3,7 +3,7 @@ using CM.Units;
 using TMPro;
 using UnityEngine;
 
-public class Stockpile : MonoBehaviour, IInteractable
+public class Stockpile : Entity, IInteractable
 {
     public static Dictionary<ResourceSO, Stockpile> stockpiles = new();
     public ResourceSO resource;
@@ -50,5 +50,8 @@ public class Stockpile : MonoBehaviour, IInteractable
     public void Interact(UnitController unitController)
     {
         unitController._inventory.DepositResources(this);
+
+        if (IsSelected != null)
+            IsSelected.Value = false;
     }
 }

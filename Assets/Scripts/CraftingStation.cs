@@ -3,7 +3,7 @@ using Shapes;
 using TMPro;
 using UnityEngine;
 
-public class CraftingStation : MonoBehaviour, IInteractable
+public class CraftingStation : Entity, IInteractable
 {
     [SerializeField]
     private TextMeshPro _textMeshPro;
@@ -58,6 +58,7 @@ public class CraftingStation : MonoBehaviour, IInteractable
         InteractionController.SetUpInteractableTriggerCollider(result);
     }
     
+    // TODO: Move this to a utility class.
     private Vector3 RandomPointInCircle(Vector3 center, float radius)
     {
         var point = Random.insideUnitCircle * radius;

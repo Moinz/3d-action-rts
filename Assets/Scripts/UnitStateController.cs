@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CM.Units
 {
@@ -17,60 +18,32 @@ namespace CM.Units
         public Inventory Inventory => _inventory;
 
         [SerializeField]
-        private GathererBrain _gathererBrain;
+        private BoarBrain _boarBrain;
         
         [SerializeField]
-        private SoldierBrain _soldierBrain;
+        private PlayerBrain playerBrain;
 
-        [SerializeField]
-        private PlayerBrain _playerBrain;
-        
-        [SerializeField]
-        private bool _isGatherer;
-
-        [SerializeField]
-        private bool _isPlayer;
+        private Brain _activeBrain;
 
         private void Start()
         {
             _controller = GetComponent<UnitController>();
             _inventory = GetComponent<Inventory>();
 
-            _gathererBrain.Initialize(this, _controller);
-            _soldierBrain.Initialize(this, _controller);
-            _playerBrain.Initialize(this, _controller);
+            if (_controller._isEnemy)
+                _activeBrain = _boarBrain;
+            else
+                _activeBrain = playerBrain;
+            
+            _activeBrain.Initialize(this, _controller);
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-                _isGatherer = !_isGatherer;
-
-            if (_isPlayer)
-            {
-                if (Time.frameCount % _playerBrain.TickRate != 0)
+            if (Time.frameCount % _activeBrain.TickRate != 0)
                     return;
-                
-                _playerBrain.Tick();
-                return;
-            }
             
-            // Gatherer
-            if (_isGatherer)
-            {
-                if (Time.frameCount % _gathererBrain.TickRate != 0)
-                    return;
-                
-                _gathererBrain.Tick();
-                return;
-            }
-            
-            // Soldier
-            if (Time.frameCount % _soldierBrain.TickRate != 0)
-                return;
-            
-            _soldierBrain.Tick();
-            
+            _activeBrain.Tick();
         }
 
         public List<T> Prune<T>(List<T> list)

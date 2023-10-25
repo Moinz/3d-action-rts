@@ -50,7 +50,8 @@ namespace CM.Units
 
         private void OnDeath()
         {
-            _inventory.EjectInventory();
+            if (_inventory)
+                _inventory.EjectInventory();
             
             gameObject.SetActive(false);
         }

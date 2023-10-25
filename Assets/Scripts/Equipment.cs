@@ -1,7 +1,7 @@
 using CM.Units;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour, IInteractable
+public class Equipment : Entity, IInteractable
 {
     public Attachment.Enum_AttachmentType attachmentType;
     public Attachment attachedTo;
@@ -36,5 +36,17 @@ public class Equipment : MonoBehaviour, IInteractable
     public void Interact(UnitController unitController)
     {
         unitController.GetAttachment(attachmentType).TryAttach(this);
+    }
+
+    public void TryDetach()
+    {
+        attachedTo._unitController.Attack -= Use;
+        attachedTo = null;
+        
+        _isEquipped = false;
+        
+        transform.SetParent(null);
+        var rb = transform.GetComponent<Rigidbody>();
+        rb.isKinematic = false;
     }
 }
