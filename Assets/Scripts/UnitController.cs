@@ -8,22 +8,23 @@ namespace CM.Units
     public class UnitController : MonoBehaviour
     {
         public bool _isEnemy;
-        
-        [SerializeField]
-        private NavMeshAgent _agent;
 
-        [SerializeField]
-        private Attachment[] _attachments;
+        public UnitArchetype _archetype;
+        public UnitStatistics _statistics;
+
+        [SerializeField] private NavMeshAgent _agent;
+
+        [SerializeField] private Attachment[] _attachments;
 
         private HealthModule _healthModule;
         internal Inventory _inventory;
-        
+
         private Action onArrived;
-        
+
         public float vision;
-        
+
         public Action<GameObject> Attack;
-        
+
         public float interactRange = 2.5f;
 
 
@@ -52,7 +53,7 @@ namespace CM.Units
         {
             if (_inventory)
                 _inventory.EjectInventory();
-            
+
             gameObject.SetActive(false);
         }
 
@@ -60,20 +61,20 @@ namespace CM.Units
         {
             _agent.SetDestination(position);
             StartCoroutine(WaitForArrivalCoroutine());
-            
+
             this.onArrived = onArrived;
         }
 
         private IEnumerator WaitForArrivalCoroutine()
         {
             yield return null;
-            
+
             while (_agent.remainingDistance > .25f)
             {
                 yield return null;
             }
-            
-            Debug.Log(gameObject.name +" Arrived!");
+
+            Debug.Log(gameObject.name + " Arrived!");
             onArrived?.Invoke();
         }
 
@@ -91,7 +92,7 @@ namespace CM.Units
         public void Stop()
         {
             _agent.isStopped = true;
-            
+
             onArrived?.Invoke();
         }
     }

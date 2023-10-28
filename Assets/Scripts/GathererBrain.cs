@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CM.Units
 {
     
-    [CreateAssetMenu(menuName = "CM/Behaviors/Brains/Gatherer")]
+    [Serializable]
     public class GathererBrain : Brain
     {
         public GathererBrain(UnitStateController stateController, UnitController unitUnitController)

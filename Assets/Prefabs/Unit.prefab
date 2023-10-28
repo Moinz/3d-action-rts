@@ -98,6 +98,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isEnemy: 0
+  _archetype: {fileID: 11400000, guid: 2f62afccdee3d0641aa1102759781c1c, type: 2}
+  _statistics:
+    health:
+      BaseValue: 0
+      modifiers: []
+    attack:
+      BaseValue: 0
+      modifiers: []
+    defense:
+      BaseValue: 0
+      modifiers: []
+    attackSpeed:
+      BaseValue: 0
+      modifiers: []
+    vision:
+      BaseValue: 0
+      modifiers: []
+    strength:
+      BaseValue: 0
+      modifiers: []
+    agility:
+      BaseValue: 0
+      modifiers: []
+    intelligence:
+      BaseValue: 0
+      modifiers: []
   _agent: {fileID: 0}
   _attachments: []
   vision: 15

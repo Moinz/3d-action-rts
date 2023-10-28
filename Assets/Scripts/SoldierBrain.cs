@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace CM.Units
 {
-    [CreateAssetMenu(menuName = "CM/Behaviors/Brains/Soldier")]
+    [Serializable]
     public class SoldierBrain : Brain
     {
         public override int TickRate => 10;
