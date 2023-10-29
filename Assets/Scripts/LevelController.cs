@@ -1,14 +1,14 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField]
-    private ResourceSO[] _resources;
-
-    [SerializeField]
-    private Vector2 _levelSize = new(10, 10);
+    [SerializeField] 
+    private int _levelSize = 10;
 
     [SerializeField, Range(0, 1)]
     private float density;
@@ -21,72 +21,89 @@ public class LevelController : MonoBehaviour
     
     private List<GameObject> items = new();
 
-    public void PopulateLevel()
+    [SerializeField]
+    public WaveFunctionCollapse _waveFunctionCollapse;
+
+    public static LevelController Instance => _instance ? _instance : _instance = FindObjectOfType<LevelController>();
+    private static LevelController _instance;
+
+    private void Awake()
     {
-        var treeCount = Mathf.RoundToInt(_levelSize.x * _levelSize.y * density);
-        var rockCount = Mathf.RoundToInt(_levelSize.x * _levelSize.y * density);
+        GenerateLevel();
+    }
+    
+    [SerializeField]
+    private List<TileData> _tileData;
+
+    public void GenerateLevel()
+    {
+        CleanUp();
         
-        var itemCount = treeCount + rockCount;
-        items = new List<GameObject>(itemCount);
-
-        for (int i = 0; i < itemCount; i++)
+        _waveFunctionCollapse = new WaveFunctionCollapse();
+        
+        var tiles = Resources.LoadAll<TileData>("tiledata");
+        var tileData = new List<TileData>();
+        
+        foreach (var data in tiles)
         {
-            SpawnResource(_resources[i % _resources.Length]);
-        }
-
-        EnsureEvenSpread();
-    }
-
-    // TODO: Incorporate a Poisson Disc Sampling algorithm
-    private void EnsureEvenSpread()
-    {
-        var iterations = 0;
-        var maxIterations = _iterations;
-        while (iterations < maxIterations)
-        {
-            for (int i = 0; i < items.Count; i++)
-            {
-                var item = items[i];
-
-                var pos = item.transform.position;
-
-                for (int j = 0; j < items.Count; j++)
-                {
-                    if (i == j)
-                        continue;
-
-                    var otherItem = items[j];
-
-                    var otherPos = otherItem.transform.position;
-
-                    var distance = Vector3.Distance(pos, otherPos);
-                    
-                    if (distance < _maxDistance)
-                    {
-                        var inverseDistance = _maxDistance - distance;
-                        var direction = (pos - otherPos).normalized;
-
-                        pos += direction * inverseDistance;
-                    }
-                }
-
-                item.transform.position = pos;
-            }
+            tileData.Add(TileData.CopyTileData(data));
             
-            iterations++;
+            if (!data.rotateable)
+                continue;
+            
+            tileData.Add(TileData.CreateRotatedTileData(data, 1));
+            tileData.Add(TileData.CreateRotatedTileData(data, 2));
+            tileData.Add(TileData.CreateRotatedTileData(data, 3));
         }
+
+        var tileDataArray = tileData.ToArray();
+        foreach (var data in tileData)
+        {
+            data.analyze(tileDataArray);
+        }
+
+        _tileData = tileData;
+        
+        for (var index = 0; index < _tileData.Count; index++)
+        {
+            var data = _tileData[index];
+            var go = new GameObject(data.name);
+            go.transform.position += new Vector3(index, 0, -10);
+            var tile = go.AddComponent<Tile>();
+            var tileGO = Instantiate(data.mesh, go.transform);
+            
+            tileGO.transform.localPosition = Vector3.zero;
+            tileGO.transform.localRotation = Quaternion.AngleAxis(90 * data.rotations, Vector3.up);
+            tile._tileData = data;
+        }
+
+        _waveFunctionCollapse.Initialize(_levelSize, tileData);
+        _waveFunctionCollapse.Collapse();
     }
 
-    private void SpawnResource(ResourceSO resourceSO)
+    private bool automatic;
+    private void Update()
     {
-        var x = Random.Range(-_levelSize.x / 2, _levelSize.x / 2);
-        var z = Random.Range(-_levelSize.y / 2, _levelSize.y / 2);
-
-        var resourceNode = ResourceFactory.CreateResourceNode(resourceSO, new Vector3(x, 0, z), transform);
-
-        resourceNode.name = resourceSO.name + transform.position;
-        resourceNode.gameObject.layer = gameObject.layer;
-        items.Add(resourceNode.gameObject);
+        if (Keyboard.current.leftShiftKey.wasPressedThisFrame)
+            automatic = !automatic;
+        
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            GenerateLevel();
+            return;
+        }
+        
+        if (automatic)
+        {
+            _waveFunctionCollapse.Collapse();
+            return;
+        }
+        
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            _waveFunctionCollapse.Collapse();
+        }
+ 
     }
 
     public void CleanUp()
