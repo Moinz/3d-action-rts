@@ -84,7 +84,7 @@ namespace CM.Units
 
                 // If we have the same _isEnemy setting, we are probably friends.
                 // TODO: A more sophisticated way of determining friend or foe.
-                if (unitController._isEnemy == _unitController._isEnemy) 
+                if (unitController.team == _unitController.team) 
                     continue;
                 
                 Target = unitController.gameObject;

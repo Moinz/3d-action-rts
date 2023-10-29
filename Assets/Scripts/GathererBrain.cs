@@ -82,9 +82,9 @@ namespace CM.Units
                 
                 var resource = Target.GetComponent<Resource>();
                 
-                _stateController.Inventory.TryAddResource(resource);
+                inventory.TryAddResource(resource);
 
-                if (!_stateController.Inventory.IsFull)
+                if (!inventory.IsFull)
                     _gatherState = Enum_GatherStates.Searching;
                 else
                 {
@@ -104,7 +104,7 @@ namespace CM.Units
             {
                 var stockpile = _stateController.target.GetComponent<Stockpile>();
                 
-                _stateController.Inventory.DepositResources(stockpile);
+                inventory.DepositResources(stockpile);
             }
 
             _gatherState = Enum_GatherStates.Harvesting;

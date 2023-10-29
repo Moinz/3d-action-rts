@@ -10,6 +10,8 @@ namespace CM.Units
         public UnitStateController _stateController;
         public UnitController _unitController;
         
+        public Inventory inventory => _unitController._inventory;
+        
         public GameObject Target
         {
             get => _stateController.target;

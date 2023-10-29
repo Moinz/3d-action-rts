@@ -1,41 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CM.Units
 {
-    public class UnitStateController : MonoBehaviour
+    public partial class UnitStateController : MonoBehaviour
     {
-        private UnitController _controller;
-        private Inventory _inventory;
-        
+        private UnitController _unitController;
         public GameObject target;
         
-        private Collider[] SearchColliders = new Collider[20];
-        public List<Collider> PrunedAndSortedColliders = new();
-        
-        public Inventory Inventory => _inventory;
-
-        [SerializeField]
-        private BoarBrain _boarBrain;
-        
-        [SerializeField]
-        private PlayerBrain playerBrain;
-
         private Brain _activeBrain;
 
         private void Start()
         {
-            _controller = GetComponent<UnitController>();
-            _inventory = GetComponent<Inventory>();
-
-            if (_controller._isEnemy)
-                _activeBrain = _boarBrain;
-            else
-                _activeBrain = playerBrain;
-            
-            _activeBrain.Initialize(this, _controller);
+            _unitController = GetComponent<UnitController>();
+            _activeBrain.Initialize(this, _unitController);
         }
 
         private void Update()
@@ -46,6 +25,36 @@ namespace CM.Units
             _activeBrain.Tick();
         }
 
+        
+        private void OnDrawGizmos()
+        {
+            if (!_unitController)
+                _unitController = GetComponent<UnitController>();
+            
+            Gizmos.DrawWireSphere(transform.position, _unitController.vision);
+        }
+    }
+
+    public partial class UnitStateController
+    {
+        private Collider[] SearchColliders = new Collider[20];
+        public List<Collider> PrunedAndSortedColliders = new();   
+        
+        public void Query_PerformSearch(LayerMask layerMask)
+        {
+            SearchColliders = new Collider[20];
+            
+            var pos = transform.position;
+            var hits = Physics.OverlapSphereNonAlloc(pos, _unitController.vision, SearchColliders, layerMask,
+                QueryTriggerInteraction.Ignore);
+            
+            if (hits == 0)
+                return;
+            
+            var colliders = Prune(SearchColliders.ToList());
+            PrunedAndSortedColliders = colliders.OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).ToList();
+        }
+        
         public List<T> Prune<T>(List<T> list)
         {
             // reverse for loop to remove items from list
@@ -57,29 +66,6 @@ namespace CM.Units
             }
 
             return list;
-        }
-
-        private void OnDrawGizmos()
-        {
-            if (!_controller)
-                _controller = GetComponent<UnitController>();
-            
-            Gizmos.DrawWireSphere(transform.position, _controller.vision);
-        }
-        
-        public void Query_PerformSearch(LayerMask layerMask)
-        {
-            SearchColliders = new Collider[20];
-            
-            var pos = transform.position;
-            var hits = Physics.OverlapSphereNonAlloc(pos, _controller.vision, SearchColliders, layerMask,
-                QueryTriggerInteraction.Ignore);
-            
-            if (hits == 0)
-                return;
-            
-            var colliders = Prune(SearchColliders.ToList());
-            PrunedAndSortedColliders = colliders.OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).ToList();
         }
     }
 }

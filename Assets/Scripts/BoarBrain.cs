@@ -16,7 +16,7 @@ namespace CM.Units
             _stateController = stateController;
             _unitController = unitController;
             
-            _originalPosition = _stateController.transform.position;
+            _originalPosition = _unitController.transform.position;
         }
 
         private enum BoarStates

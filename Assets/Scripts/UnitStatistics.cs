@@ -10,7 +10,7 @@ namespace CM.Units
         public Statistic<int> defense;
         
         public Statistic<float> attackSpeed;
-        public Statistic<int> vision;
+        public Statistic<float> vision;
 
         public Statistic<int> strength;
         public Statistic<int> agility;
