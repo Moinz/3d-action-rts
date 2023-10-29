@@ -184,12 +184,13 @@ public class WaveFunctionCollapse
             collapsed = true;
             
             var go = new GameObject(data.name);
+            go.transform.SetParent(LevelController.Instance.transform);
             go.transform.position += new Vector3(position.x, 0f, position.y);
             var tile = go.AddComponent<Tile>();
             var tileGO = GameObject.Instantiate(data.mesh, go.transform);
             
             tileGO.transform.localPosition = Vector3.zero;
-            go.transform.localRotation = Quaternion.AngleAxis(90 * data.rotations, Vector3.up);
+            tileGO.transform.localRotation = Quaternion.AngleAxis(90 * data.rotations, Vector3.up);
             tile._tileData = data;
             go.name = tile.name;
         }
