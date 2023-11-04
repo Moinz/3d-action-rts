@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
   m_Name: wall-opening
   m_EditorClassIdentifier: 
-  mesh: {fileID: 919132149155446097, guid: 5012ae2c913b202479b7864da7a2200d, type: 3}
+  mesh: {fileID: 8244482294512864536, guid: a610d0d55488b544c8d4738b9d556764, type: 3}
   rotations: 0
-  edges: 01000000020000000100000002000000
+  edges: 00000000010000000000000001000000
   rotateable: 1
+  weight: 0.1
   up: []
   right: []
   down: []

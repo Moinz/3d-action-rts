@@ -123,6 +123,311 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &105232154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-narrow 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 1
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &124051882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 2
+  edges: 01000000020000000200000001000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  down:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &144892982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: column
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 837271596602542833, guid: 6d1d202006c625c4990c58b5958aa8fb, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &257461857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall-opening
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 8244482294512864536, guid: a610d0d55488b544c8d4738b9d556764, type: 3}
+  rotations: 0
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &387898205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "stair 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 3
+  edges: 02000000010000000200000000000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
 --- !u!1 &433403629
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +506,258 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &524282260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: stair
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 0
+  edges: 00000000000000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &603034006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: stair
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 0
+  edges: 00000000020000000100000002000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+--- !u!114 &678677426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 2
+  edges: 01000000000000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &694373213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-half 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 2
+  edges: 01000000010000000000000001000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +852,258 @@ Transform:
   m_Father: {fileID: 1902848459}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &737445826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 1
+  edges: 02000000020000000100000001000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  right:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &744181500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 1
+  edges: 00000000000000000100000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &745341823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall-half
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 0
+  edges: 00000000010000000100000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &779155929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-opening 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 5012ae2c913b202479b7864da7a2200d, type: 3}
+  rotations: 2
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
 --- !u!1 &846428792
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +1136,295 @@ Transform:
   m_Father: {fileID: 1902848459}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867453246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 3
+  edges: 01000000010000000000000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &879652313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 3
+  edges: 01000000010000000200000002000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  left:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+--- !u!114 &936841637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "stair 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 2
+  edges: 01000000020000000000000002000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+--- !u!114 &940722698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "stair 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 1
+  edges: 02000000000000000200000001000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &960986625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "stair 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 1
+  edges: 00000000000000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +1518,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e61f60cbb786da4c9ecef3534393c0c, type: 3}
   m_Name: 
@@ -444,6 +1542,1156 @@ MonoBehaviour:
   searchMask:
     serializedVersion: 2
     m_Bits: 1984
+--- !u!114 &967524012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-opening 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 8244482294512864536, guid: a610d0d55488b544c8d4738b9d556764, type: 3}
+  rotations: 3
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &986745447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall-narrow
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 0
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &1112830598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: floor-detail
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 80bb187a11ed69d44b86d020279911aa, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 2.5
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1211832490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: column
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 837271596602542833, guid: 6d1d202006c625c4990c58b5958aa8fb, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 0.05
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1242874701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: floor-detail
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 80bb187a11ed69d44b86d020279911aa, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1300302160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: floor
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: f39fcc1e328029640bf184a353ebf123, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 5
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1327363504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "stair 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 2
+  edges: 01000000000000000000000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1356428346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 0
+  edges: 02000000010000000100000002000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 940722698}
+  - {fileID: 387898205}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 603034006}
+  - {fileID: 936841637}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+--- !u!114 &1368597968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-narrow 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 2
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &1500428878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-half 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 1
+  edges: 01000000000000000100000001000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+--- !u!114 &1536854150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-narrow 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 2
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &1590385916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-half 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 1
+  edges: 01000000000000000100000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &1616007386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall-narrow
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 0
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &1637244698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-half 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 3
+  edges: 01000000010000000100000000000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1649346940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-narrow 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 3
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1690321092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall-opening
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 5012ae2c913b202479b7864da7a2200d, type: 3}
+  rotations: 0
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &1734957296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: column-detail
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 2524660923704502859, guid: 3f5fc40c9a5d8184ea2affc346a0bcca, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 0.05
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1741914294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall-half
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 0
+  edges: 00000000010000000100000001000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
 --- !u!1 &1748490688
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,14 +2721,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9339fa606714f8844bf240a582a166ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelSize: 7
+  _levelSize: 8
   density: 0.1
   _iterations: 5
   _maxDistance: 0.1
   _waveFunctionCollapse:
-    _grid: []
+    _grid:
+    - position: {x: 0, y: 0}
+      collapsed: 1
+      options:
+      - {fileID: 779155929}
+      upPosition: {x: 0, y: 1}
+      rightPosition: {x: 1, y: 0}
+      downPosition: {x: 0, y: -1}
+      leftPosition: {x: -1, y: 0}
+    - position: {x: 0, y: 1}
+      collapsed: 1
+      options:
+      - {fileID: 779155929}
+      upPosition: {x: 0, y: 2}
+      rightPosition: {x: 1, y: 1}
+      downPosition: {x: 0, y: 0}
+      leftPosition: {x: -1, y: 1}
+    - position: {x: 1, y: 0}
+      collapsed: 1
+      options:
+      - {fileID: 779155929}
+      upPosition: {x: 1, y: 1}
+      rightPosition: {x: 2, y: 0}
+      downPosition: {x: 1, y: -1}
+      leftPosition: {x: 0, y: 0}
+    - position: {x: 1, y: 1}
+      collapsed: 1
+      options:
+      - {fileID: 1690321092}
+      upPosition: {x: 1, y: 2}
+      rightPosition: {x: 2, y: 1}
+      downPosition: {x: 1, y: 0}
+      leftPosition: {x: 0, y: 1}
     gridCopy: []
-  _tileData: []
+  _tileData:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 940722698}
+  - {fileID: 936841637}
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1907374518}
+  - {fileID: 1368597968}
+  - {fileID: 1868996472}
+  - {fileID: 257461857}
+  - {fileID: 1818856785}
+  - {fileID: 1873423400}
+  - {fileID: 967524012}
 --- !u!4 &1748490690
 Transform:
   m_ObjectHideFlags: 0
@@ -496,6 +2800,481 @@ Transform:
   m_Father: {fileID: 846428793}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751766771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: wall
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: a74e04fd324d9034a86eeab184c80cc9, type: 3}
+  rotations: 0
+  edges: 00000000010000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1756484605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: column-detail
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 2524660923704502859, guid: 3f5fc40c9a5d8184ea2affc346a0bcca, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1774315038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-opening 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 5012ae2c913b202479b7864da7a2200d, type: 3}
+  rotations: 1
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1778655178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: floor
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: f39fcc1e328029640bf184a353ebf123, type: 3}
+  rotations: 0
+  edges: 00000000000000000000000000000000
+  rotateable: 0
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &1818856785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-opening 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 8244482294512864536, guid: a610d0d55488b544c8d4738b9d556764, type: 3}
+  rotations: 1
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1868996472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-narrow 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 3
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1873423400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-opening 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 8244482294512864536, guid: a610d0d55488b544c8d4738b9d556764, type: 3}
+  rotations: 2
+  edges: 00000000010000000000000001000000
+  rotateable: 1
+  weight: 0.1
+  up:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 936841637}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  right:
+  - {fileID: 940722698}
+  - {fileID: 737445826}
+  - {fileID: 124051882}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  down:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 603034006}
+  - {fileID: 1741914294}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
+  left:
+  - {fileID: 387898205}
+  - {fileID: 1356428346}
+  - {fileID: 879652313}
+  - {fileID: 1741914294}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 986745447}
+  - {fileID: 1368597968}
+  - {fileID: 257461857}
+  - {fileID: 1873423400}
 --- !u!1 &1902848458
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,3 +3322,336 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e354f5309a45b9b15af983c200c10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1907374518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-narrow 90\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
+  rotations: 1
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 0.25
+  up:
+  - {fileID: 603034006}
+  - {fileID: 1356428346}
+  - {fileID: 737445826}
+  - {fileID: 1741914294}
+  - {fileID: 1500428878}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  right:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 387898205}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  down:
+  - {fileID: 936841637}
+  - {fileID: 124051882}
+  - {fileID: 879652313}
+  - {fileID: 1500428878}
+  - {fileID: 694373213}
+  - {fileID: 1637244698}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+  left:
+  - {fileID: 1211832490}
+  - {fileID: 1734957296}
+  - {fileID: 1300302160}
+  - {fileID: 1112830598}
+  - {fileID: 940722698}
+  - {fileID: 1500428878}
+  - {fileID: 1907374518}
+  - {fileID: 1868996472}
+  - {fileID: 1818856785}
+  - {fileID: 967524012}
+--- !u!114 &1964886050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-half 180\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 2
+  edges: 01000000010000000000000001000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 745341823}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+--- !u!114 &2030407545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "stair 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 584bb7b6953dab445bb86c98ee07643b, type: 3}
+  rotations: 3
+  edges: 00000000010000000000000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &2060230981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-half 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 62e4a781bc5d25246aade32c707f3418, type: 3}
+  rotations: 3
+  edges: 01000000010000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 960986625}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 1616007386}
+  - {fileID: 1536854150}
+  - {fileID: 1690321092}
+  - {fileID: 779155929}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+--- !u!114 &2121559753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26811cd02d46ac9fc0ed8690996a47, type: 3}
+  m_Name: "wall-opening 270\xB0"
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 919132149155446097, guid: 5012ae2c913b202479b7864da7a2200d, type: 3}
+  rotations: 3
+  edges: 01000000000000000100000000000000
+  rotateable: 1
+  weight: 1
+  up:
+  - {fileID: 524282260}
+  - {fileID: 1751766771}
+  - {fileID: 744181500}
+  - {fileID: 745341823}
+  - {fileID: 1590385916}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  right:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 1327363504}
+  - {fileID: 2030407545}
+  - {fileID: 1751766771}
+  - {fileID: 867453246}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  down:
+  - {fileID: 1327363504}
+  - {fileID: 678677426}
+  - {fileID: 867453246}
+  - {fileID: 1590385916}
+  - {fileID: 1964886050}
+  - {fileID: 2060230981}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}
+  left:
+  - {fileID: 144892982}
+  - {fileID: 1756484605}
+  - {fileID: 1778655178}
+  - {fileID: 1242874701}
+  - {fileID: 524282260}
+  - {fileID: 960986625}
+  - {fileID: 1327363504}
+  - {fileID: 744181500}
+  - {fileID: 678677426}
+  - {fileID: 1590385916}
+  - {fileID: 105232154}
+  - {fileID: 1649346940}
+  - {fileID: 1774315038}
+  - {fileID: 2121559753}

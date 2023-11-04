@@ -16,6 +16,7 @@ MonoBehaviour:
   rotations: 0
   edges: 00000000000000000000000000000000
   rotateable: 0
+  weight: 2.5
   up: []
   right: []
   down: []

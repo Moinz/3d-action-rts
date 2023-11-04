@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 919132149155446097, guid: 3d6cead85995a9848b6b5872f962c47d, type: 3}
   rotations: 0
-  edges: 01000000020000000100000002000000
+  edges: 00000000010000000000000001000000
   rotateable: 1
+  weight: 0.25
   up: []
   right: []
   down: []

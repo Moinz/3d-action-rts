@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: floor
   m_EditorClassIdentifier: 
   mesh: {fileID: 919132149155446097, guid: f39fcc1e328029640bf184a353ebf123, type: 3}
+  rotations: 0
   edges: 00000000000000000000000000000000
   rotateable: 0
+  weight: 5
+  up: []
+  right: []
+  down: []
+  left: []

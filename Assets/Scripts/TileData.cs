@@ -10,6 +10,8 @@ public class TileData : ScriptableObject
     public int[] edges = {0, 0, 0, 0 };
     public bool rotateable = true;
 
+    public float weight = 1f;
+    
     public List<TileData> up = new();
     public List<TileData> right = new();
     public List<TileData> down = new ();
@@ -69,6 +71,7 @@ public class TileData : ScriptableObject
         td.mesh = data.mesh;
         td.edges = data.edges;
         td.rotateable = data.rotateable;
+        td.weight = data.weight;
 
         return td;
     }
