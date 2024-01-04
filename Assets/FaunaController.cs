@@ -1,15 +1,18 @@
 using System.Collections;
+using CM.Units;
 using UnityEngine;
 
 public class FaunaController : MonoBehaviour
 {
-    public GameObject boar;
+    public UnitStateController boar;
 
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(10f);
         
         var boarInstance = Instantiate(boar, transform.position, Quaternion.identity);
-        InteractionController.SetUpInteractableTriggerCollider(boarInstance);
+        boarInstance.Initialize(new BoarBrain());
+        
+        InteractionController.SetUpInteractableTriggerCollider(boarInstance.gameObject);
     }
 }

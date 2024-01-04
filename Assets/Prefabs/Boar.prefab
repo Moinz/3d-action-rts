@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 1119081017453972428}
   - component: {fileID: 1119081017453972418}
   - component: {fileID: 1119081017453972429}
+  - component: {fileID: 8034419553882185522}
   - component: {fileID: 546115934435094186}
   - component: {fileID: 3701884840590940099}
   - component: {fileID: 7179695360614004560}
@@ -168,11 +169,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a034a51bd59e71d46a6b7530cb35c7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isEnemy: 1
-  _agent: {fileID: 0}
   _attachments: []
-  vision: 5
-  interactRange: 2.5
+  _archetype: {fileID: 11400000, guid: ed0228ad9658cb940aefd8bc9d0bd49e, type: 2}
+  _statistics:
+    health:
+      BaseValue: 100
+    attack:
+      BaseValue: 10
+    defense:
+      BaseValue: 1
+    attackSpeed:
+      BaseValue: 2
+    vision:
+      BaseValue: 4
+    strength:
+      BaseValue: 10
+    agility:
+      BaseValue: 10
+    intelligence:
+      BaseValue: 10
+  team: 2
 --- !u!114 &1119081017453972418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,18 +203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   PrunedAndSortedColliders: []
-  _boarBrain:
-    _stateController: {fileID: 0}
-    _unitController: {fileID: 0}
-    searchMask:
-      serializedVersion: 2
-      m_Bits: 128
-  playerBrain:
-    _stateController: {fileID: 0}
-    _unitController: {fileID: 0}
-    searchMask:
-      serializedVersion: 2
-      m_Bits: 0
 --- !u!195 &1119081017453972429
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -221,6 +225,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8034419553882185522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119081017453972419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e50527786724da4b74589d865662220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 1119081017453972429}
 --- !u!54 &546115934435094186
 Rigidbody:
   m_ObjectHideFlags: 0

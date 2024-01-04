@@ -11,6 +11,8 @@ namespace CM.Units
 
         private Vector3 _originalPosition;
 
+        private float _timeUntilNextWander;
+
         public override void Initialize(UnitStateController stateController, UnitController unitController)
         {
             _stateController = stateController;
@@ -105,9 +107,21 @@ namespace CM.Units
                 return;
             }
         }
+        
+        private bool CanWander()
+        {
+            if (_timeUntilNextWander > Time.time)
+                return false;
+            
+            _timeUntilNextWander = Time.time + Random.Range(3f, 6f);
+            return true;
+        }
 
         private void Wander()
         {
+            if (!CanWander())
+                return;
+            
             var pos = _originalPosition;
             var randomPos = RandomPointInCircle(pos, 3f);
             

@@ -19,7 +19,7 @@ namespace CM.Units
         }
 
         public LayerMask searchMask;
-        
+
         public abstract void Tick();
         
         public abstract void Initialize(UnitStateController stateController, UnitController unitController);

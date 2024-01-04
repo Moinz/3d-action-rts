@@ -8,12 +8,14 @@ namespace CM.Units
     {
         private UnitController _unitController;
         public GameObject target;
-        
+
         private Brain _activeBrain;
 
-        private void Start()
+        public void Initialize(Brain brain)
         {
             _unitController = GetComponent<UnitController>();
+
+            _activeBrain = brain;
             _activeBrain.Initialize(this, _unitController);
         }
 

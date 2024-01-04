@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 4849413759886070693}
   - component: {fileID: 4849413759886070690}
   - component: {fileID: 4849413759886070692}
+  - component: {fileID: 3921939207165328749}
   - component: {fileID: 4849413759886070691}
   - component: {fileID: 3411501478727704851}
   - component: {fileID: 8122902585620858756}
@@ -97,37 +98,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a034a51bd59e71d46a6b7530cb35c7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isEnemy: 0
+  _attachments: []
   _archetype: {fileID: 11400000, guid: 2f62afccdee3d0641aa1102759781c1c, type: 2}
   _statistics:
     health:
       BaseValue: 0
-      modifiers: []
     attack:
       BaseValue: 0
-      modifiers: []
     defense:
       BaseValue: 0
-      modifiers: []
     attackSpeed:
       BaseValue: 0
-      modifiers: []
     vision:
       BaseValue: 0
-      modifiers: []
     strength:
       BaseValue: 0
-      modifiers: []
     agility:
       BaseValue: 0
-      modifiers: []
     intelligence:
       BaseValue: 0
-      modifiers: []
-  _agent: {fileID: 0}
-  _attachments: []
-  vision: 15
-  interactRange: 2.5
+  team: 0
 --- !u!114 &4849413759886070690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,18 +132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   PrunedAndSortedColliders: []
-  _boarBrain:
-    _stateController: {fileID: 0}
-    _unitController: {fileID: 0}
-    searchMask:
-      serializedVersion: 2
-      m_Bits: 0
-  playerBrain:
-    _stateController: {fileID: 0}
-    _unitController: {fileID: 0}
-    searchMask:
-      serializedVersion: 2
-      m_Bits: 1024
 --- !u!195 &4849413759886070692
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -176,6 +154,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &3921939207165328749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849413759886070694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e50527786724da4b74589d865662220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 4849413759886070692}
 --- !u!114 &4849413759886070691
 MonoBehaviour:
   m_ObjectHideFlags: 0

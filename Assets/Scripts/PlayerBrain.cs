@@ -18,6 +18,11 @@ namespace CM.Units
             Moving,
             Interacting,
         }
+
+        public PlayerBrain()
+        {
+            
+        }
         
         public PlayerBrain(UnitStateController stateController, UnitController unitController)
         {
@@ -51,6 +56,8 @@ namespace CM.Units
         {
             if (!context.performed)
                 return;
+            
+            MoveToCursor();
         }
 
 
@@ -119,6 +126,19 @@ namespace CM.Units
             _unitController.MoveTo(_selectionController.Selected.Rigidbody.position, () =>
             {
                 _currentState = States.Interacting;
+            });
+        }
+
+        private void MoveToCursor()
+        {
+            _currentState = States.Moving;
+
+            var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Physics.Raycast(ray, out var hit, 100f, LayerMask.GetMask("Default"));
+            
+            _unitController.MoveTo(hit.point, () =>
+            {
+                _currentState = States.Idle;
             });
         }
     }

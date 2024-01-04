@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CM.WorldGrid;
 using UnityEngine;
 
 [System.Serializable]
@@ -31,6 +32,32 @@ public class WaveFunctionCollapse
             }
         }
 
+        foreach (var wfcTile in _grid)
+        {
+            wfcTile.SetNeighbors(_grid, _size);
+        }
+    }
+
+    private bool _isInitialized;
+    public void Initialize(WorldSelection selection, List<TileData> tileData)
+    { 
+        if (_isInitialized)
+            return;
+        
+        _isInitialized = true;
+        
+        _size = selection.size;
+        _grid = new List<WFCTile>(selection.size * selection.size);
+        _tileWeightTable = new TileWeightTable();
+        _tileData = new List<TileData>(tileData);
+        var tileDataArray = _tileData.ToArray();
+
+        var cells = selection.Cells;
+        foreach (var worldCell in cells)
+        {
+            _grid.Add(new WFCTile(new Vector2Int(worldCell.position.x, worldCell.position.z), false, tileDataArray));
+        }
+        
         foreach (var wfcTile in _grid)
         {
             wfcTile.SetNeighbors(_grid, _size);
