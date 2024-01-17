@@ -28,6 +28,7 @@ namespace CM.Units
             Attacking,
         }
 
+        [SerializeField]
         private BoarStates _currentBoarState;
 
         public override void Tick()

@@ -10,6 +10,7 @@ namespace CM.Units
         private PlayerControls _playerControls;
         private SelectionController _selectionController;
         
+        [SerializeField]
         private States _currentState;
         
         private enum States
