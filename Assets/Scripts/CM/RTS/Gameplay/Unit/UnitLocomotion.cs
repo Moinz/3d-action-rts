@@ -44,5 +44,10 @@ namespace CM.Units
             Debug.Log(gameObject.name + " Arrived!");
             onArrived?.Invoke();
         }
+
+        public bool IsMoving()
+        {
+            return _agent.velocity.magnitude > 0;
+        }
     }
 }

@@ -4,12 +4,15 @@ using Random = UnityEngine.Random;
 
 namespace CM.Units
 {
-    [System.Serializable]
+    [Serializable]
     public class BoarBrain : Brain
     {
         public override int TickRate => 10;
 
         private Vector3 _originalPosition;
+        
+        private float DistanceToTarget => Vector3.Distance(_unitController.transform.position, Target.transform.position);
+        private bool IsTargetInRange => DistanceToTarget < _unitController.interactRange;
 
         private float _timeUntilNextWander;
 
@@ -19,6 +22,7 @@ namespace CM.Units
             _unitController = unitController;
             
             _originalPosition = _unitController.transform.position;
+            _currentBoarState = BoarStates.Patrol;
         }
 
         private enum BoarStates
@@ -38,9 +42,11 @@ namespace CM.Units
                 case BoarStates.Patrol:
                     Patrol();
                     return;
+                
                 case BoarStates.Approach:
                     Approach();
                     return;
+                
                 case BoarStates.Attacking:
                     Attack();
                     return;
@@ -49,7 +55,7 @@ namespace CM.Units
 
         private void Attack()
         {
-            if (!Target)
+            if (!Target || !IsTargetInRange)
             {
                 _currentBoarState = BoarStates.Patrol;
                 return;
@@ -58,19 +64,29 @@ namespace CM.Units
             _unitController.Attack?.Invoke(Target);
         }
 
+        private int _noMovementCounter;
         private void Approach()
         {
             if (!Target)
                 return;
-            
-            var targetPos = Target.transform.position;
-            var distance = Vector3.Distance(_stateController.transform.position, targetPos);
 
-            if (distance < _unitController.interactRange)
+            if (!IsTargetInRange)
             {
-                _currentBoarState = BoarStates.Attacking;
-                _unitController.Stop();
+                if (_unitController.IsMoving()) 
+                    return;
+                
+                _noMovementCounter++;
+
+                if (_noMovementCounter <= 10) 
+                    return;
+                
+                _currentBoarState = BoarStates.Patrol;
+                _noMovementCounter = 0;
+                return;
             }
+            
+            _currentBoarState = BoarStates.Attacking;
+            _unitController.Stop();
         }
 
         private void Patrol()

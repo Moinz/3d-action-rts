@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe68d9973414cb984b751c0b181f37a, type: 3}
-  m_Name: Boar Brain
+  m_Script: {fileID: 11500000, guid: 300af1746f5f4eeabcd9a76c4f53c8d5, type: 3}
+  m_Name: BoarBrainData
   m_EditorClassIdentifier: 
-  _stateController: {fileID: 0}
-  _unitController: {fileID: 0}
-  searchMask:
-    serializedVersion: 2
-    m_Bits: 128
+  brain:
+    _stateController: {fileID: 0}
+    _unitController: {fileID: 0}
+    searchMask:
+      serializedVersion: 2
+      m_Bits: 1152
+    _currentBoarState: 2

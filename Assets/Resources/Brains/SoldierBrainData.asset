@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960d9bcd77e04ac59628e8a21986293c, type: 3}
-  m_Name: Gatherer Brain
+  m_Script: {fileID: 11500000, guid: c8dac91ed8a742b9839da8bf1cc1c586, type: 3}
+  m_Name: SoldierBrainData
   m_EditorClassIdentifier: 
-  _stateController: {fileID: 0}
-  _unitController: {fileID: 0}
-  searchMask:
-    serializedVersion: 2
-    m_Bits: 0
-  _targetResourceSO: {fileID: 0}
-  _gatherState: 0

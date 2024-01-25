@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CM.Units
 {
@@ -10,13 +9,20 @@ namespace CM.Units
         private UnitController _unitController;
         public GameObject target;
 
-        [FormerlySerializedAs("_activeBrain")] [SerializeField]
+        [SerializeField]
         private BrainData _brainData;
 
-        public void Initialize(Brain brain)
+        public void Initialize(UnitArchetype archetype)
         {
             _unitController = GetComponent<UnitController>();
             
+            _brainData = archetype.brainData;
+            _brainData.Initialize(this, _unitController);
+        }
+        
+        private void Update()
+        {
+            _brainData.Brain.Tick();
         }
 
         private void OnDrawGizmos()

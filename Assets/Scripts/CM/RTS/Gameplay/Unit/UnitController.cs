@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace CM.Units
@@ -92,6 +93,11 @@ namespace CM.Units
         public void MoveTo(Vector3 position, Action onArrived = null)
         {
             _unitLocomotion.MoveTo(position, onArrived);
+        }
+        
+        public bool IsMoving()
+        {
+            return _unitLocomotion.IsMoving();
         }
     }
 }

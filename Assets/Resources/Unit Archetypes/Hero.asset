@@ -12,29 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf062edb4ff4967a3d3b9205c862d70, type: 3}
   m_Name: Hero
   m_EditorClassIdentifier: 
+  prefab: {fileID: 4849413759886070694, guid: 7c3eeec3f723b8d4bacc03ce8130743a, type: 3}
+  brainData: {fileID: 11400000, guid: bab18cc251d43164a94de92a59389e41, type: 2}
   name: Hero
   statistics:
     health:
       BaseValue: 150
-      modifiers: []
     attack:
       BaseValue: 15
-      modifiers: []
     defense:
       BaseValue: 4
-      modifiers: []
     attackSpeed:
       BaseValue: 1.5
-      modifiers: []
     vision:
       BaseValue: 8
-      modifiers: []
     strength:
       BaseValue: 10
-      modifiers: []
     agility:
       BaseValue: 10
-      modifiers: []
     intelligence:
       BaseValue: 10
-      modifiers: []
