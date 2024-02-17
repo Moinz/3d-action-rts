@@ -1,13 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
+using TriInspector;
 using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace CM.Units
 {
+    public class StatisticAttribute : Attribute
+    {
+        public Type StatisticType { get; }
+
+        public StatisticAttribute(Type statisticType)
+        {
+            if (!statisticType.IsGenericType || statisticType.GetGenericTypeDefinition() != typeof(Statistic<>))
+                throw new ArgumentException("Invalid type for StatisticAttribute. It must be a Statistic<> type.", nameof(statisticType));
+
+            StatisticType = statisticType;
+        }
+    }
+    
+    [CustomPropertyDrawer(typeof(StatisticAttribute))]
+    public class StatisticAttributeDrawer : PropertyDrawer
+    {
+        public override VisualElement CreatePropertyGUI(SerializedProperty property)
+        {
+            var container = new VisualElement();
+            
+            var baseValueField = new PropertyField(property.FindPropertyRelative("BaseValue"));
+            var valueField = new PropertyField(property.FindPropertyRelative("Value"));
+            
+            container.Add(baseValueField);
+            container.Add(valueField);
+            
+            return container;
+        }
+    }
+    
     [Serializable]
+    [DeclareHorizontalGroup("Statistics")]
     public struct Statistic<T>
     {
+        [Group("Statistics")]
         public T BaseValue;
+        
+        [ReadOnly, Group("Statistics")]
         public Observable<T> Value;
 
         public Statistic(T value)

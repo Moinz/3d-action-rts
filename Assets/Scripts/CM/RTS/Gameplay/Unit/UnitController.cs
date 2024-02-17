@@ -1,5 +1,5 @@
 using System;
-using UnityEditor;
+using CM.RTS.Gameplay;
 using UnityEngine;
 
 namespace CM.Units
@@ -8,14 +8,18 @@ namespace CM.Units
     {
         private UnitLocomotion _unitLocomotion;
 
-        [SerializeField] private Attachment[] _attachments;
+        [SerializeField] 
+        private Attachment[] _attachments;
 
         private HealthModule _healthModule;
         internal Inventory _inventory;
         public Action<GameObject> Attack;
-
-        private void Awake()
+        
+        public void Initialize(UnitArchetype archetype)
         {
+            _archetype = archetype;
+            team = archetype.team;
+            
             _healthModule = GetComponent<HealthModule>();
 
             _inventory = GetComponent<Inventory>();
@@ -24,6 +28,7 @@ namespace CM.Units
             _statistics = new UnitStatistics(_archetype.statistics);
             _unitLocomotion = GetComponent<UnitLocomotion>();
         }
+        
 
         private void OnEnable()
         {

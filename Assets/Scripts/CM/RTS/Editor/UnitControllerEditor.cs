@@ -13,17 +13,34 @@ namespace CM.Units
             
             var unitController = Target;
 
+
             EditorGUILayout.LabelField("Statistics", EditorStyles.boldLabel);
-            EditorGUILayout.LabelField("Interact Range", unitController.interactRange.ToString());
-            EditorGUILayout.LabelField("Vision", unitController.vision.ToString());
+            EditorGUILayout.BeginVertical();
+            GUI.backgroundColor = Color.grey;
+            DrawStatistic("Interact Range", unitController.interactRange, unitController.interactRange);
+            DrawStatistic("Vision", unitController.vision, unitController._statistics.vision.BaseValue);
             
-            EditorGUILayout.LabelField("Attack", unitController.attack.ToString());
-            EditorGUILayout.LabelField("Attack Speed", unitController.attackSpeed.ToString());
-            EditorGUILayout.LabelField("Defense", unitController.defense.ToString());
+            EditorGUILayout.LabelField("Combat Statistics", EditorStyles.boldLabel);
+            DrawStatistic("Attack", unitController.attack, unitController._statistics.attack.BaseValue);
+            DrawStatistic("Attack Speed", unitController.attackSpeed, unitController._statistics.attackSpeed.BaseValue);
+            DrawStatistic("Defense", unitController.defense, unitController._statistics.defense.BaseValue);
             
-            EditorGUILayout.LabelField("Strength", unitController.strength.ToString());
-            EditorGUILayout.LabelField("Agility", unitController.agility.ToString());
-            EditorGUILayout.LabelField("Intelligence", unitController.intelligence.ToString());
+            EditorGUILayout.LabelField("Attributes", EditorStyles.boldLabel);
+            DrawStatistic("Strength", unitController.strength, unitController._statistics.strength.BaseValue);
+            DrawStatistic("Agility", unitController.agility, unitController._statistics.agility.BaseValue);
+            DrawStatistic("Intelligence", unitController.intelligence, unitController._statistics.intelligence.BaseValue);
+            GUI.backgroundColor = Color.white;
+            EditorGUILayout.EndVertical();
+        }
+
+        private void DrawStatistic(string label, object value, object baseValue)
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField(label, value.ToString());
+            GUI.enabled = false;
+            EditorGUILayout.LabelField(baseValue.ToString());
+            GUI.enabled = true;
+            EditorGUILayout.EndHorizontal();
         }
         
         private void OnSceneGUI()

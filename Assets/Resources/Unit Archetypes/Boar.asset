@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf062edb4ff4967a3d3b9205c862d70, type: 3}
   m_Name: Boar
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1119081017453972419, guid: 3064cf1df53d1964891c468db317d8ed, type: 3}
-  brainData: {fileID: 11400000, guid: e547888a4918853409bce44929edd60d, type: 2}
   name: Boar
+  team: 2
+  prefab: {fileID: 4849413759886070694, guid: 7c3eeec3f723b8d4bacc03ce8130743a, type: 3}
+  visuals: {fileID: 8497921706935975314, guid: cc64a4e2d8222aa43916e6685fd22326, type: 3}
+  brainData: {fileID: 11400000, guid: e547888a4918853409bce44929edd60d, type: 2}
+  startingEquipment:
+  - {fileID: 6793844655204303081, guid: 2888ece6ed7afc94d80e4b543d23f25f, type: 3}
   statistics:
     health:
       BaseValue: 200

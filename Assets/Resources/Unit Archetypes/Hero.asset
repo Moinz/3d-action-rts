@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hero
   m_EditorClassIdentifier: 
   prefab: {fileID: 4849413759886070694, guid: 7c3eeec3f723b8d4bacc03ce8130743a, type: 3}
+  visuals: {fileID: 6512861142396834318, guid: f947a533acbfcb744a8f1ccfeb5ff38d, type: 3}
   brainData: {fileID: 11400000, guid: bab18cc251d43164a94de92a59389e41, type: 2}
   name: Hero
   statistics:

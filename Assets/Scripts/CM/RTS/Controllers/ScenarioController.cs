@@ -13,7 +13,7 @@ public class ScenarioController : MonoBehaviour
         // Factorize this
         var instanceOne = UnitFactory.CreateUnit(archetypeOne, spawnPosition);
         
-        spawnPosition.x -= 1f;
+        spawnPosition.x -= 2f;
 
         var instanceTwo = UnitFactory.CreateUnit(archetypeTwo, spawnPosition);
         

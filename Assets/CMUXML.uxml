@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI%20XML/HealthbarStyleSheet.uss?fileID=7433441132597879392&amp;guid=0f7e7b942ccb9bc46a14531e443fd6c4&amp;type=3#HealthbarStyleSheet" />
+    <ui:VisualElement class="HealthBar">
+        <ui:GroupBox name="HealthBar" class="HealthContainer">
+            <ui:VisualElement name="HealthOrb" class="Orb" />
+            <ui:VisualElement name="ArmorShard" class="Shard" />
+            <ui:VisualElement name="ArmorShard" class="Shard" />
+        </ui:GroupBox>
+        <ui:GroupBox name="HealthBar" class="HealthContainer">
+            <ui:VisualElement name="HealthOrb" class="Orb" />
+            <ui:VisualElement name="ArmorShard" class="Shard" />
+        </ui:GroupBox>
+        <ui:GroupBox name="HealthBar" class="HealthContainer">
+            <ui:VisualElement name="HealthOrb" class="Orb" />
+            <ui:VisualElement name="ArmorShard" class="Shard" />
+            <ui:VisualElement name="ArmorShard" class="Shard" />
+            <ui:VisualElement name="ArmorShard" class="Shard" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

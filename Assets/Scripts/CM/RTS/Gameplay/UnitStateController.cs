@@ -12,17 +12,26 @@ namespace CM.Units
         [SerializeField]
         private BrainData _brainData;
 
+        private bool _initialized;
+
         public void Initialize(UnitArchetype archetype)
         {
             _unitController = GetComponent<UnitController>();
+            _unitController.Initialize(archetype);
             
             _brainData = archetype.brainData;
             _brainData.Initialize(this, _unitController);
+            
+            _initialized = true;
         }
         
         private void Update()
         {
-            _brainData.Brain.Tick();
+            if (!_initialized)
+                return;
+            
+            if (_brainData)
+                _brainData.Brain.Tick();
         }
 
         private void OnDrawGizmos()

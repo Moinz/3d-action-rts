@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using CM.RTS.Gameplay;
+using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(HealthModule))]

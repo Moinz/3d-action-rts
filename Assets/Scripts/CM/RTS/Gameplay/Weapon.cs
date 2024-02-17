@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using CM.RTS.Gameplay;
+using UnityEngine;
 
 public class Weapon : Equipment
 {

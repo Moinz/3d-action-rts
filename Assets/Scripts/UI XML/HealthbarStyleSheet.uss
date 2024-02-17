@@ -1,0 +1,53 @@
+:root {
+    justify-content: center;
+    align-items: center;
+    --color-primary: rgb(44, 62, 80);
+    --color-secondary: rgb(231, 76, 60);
+    --color-tertiary: rgb(236, 240, 241);
+    --border-width: 4px;
+}
+
+.Orb {
+    background-image: url('project://database/Assets/Shapes/Textures/icon-disc.png?fileID=2800000&guid=4ab77a8c95c6fbb49a1687036b6898f6&type=3#icon-disc');
+    height: 50px;
+    width: 50px;
+    align-content: center;
+    align-items: center;
+}
+
+.Shard {
+    background-image: url('project://database/Assets/Shapes/Textures/icon-quad.png?fileID=2800000&guid=5742bfe6665638e46b16406a4ec422cd&type=3#icon-quad');
+    width: 25px;
+    height: 25px;
+    rotate: 155grad;
+    margin: 10px 13px;
+}
+
+.HealthBar {
+    position: relative;
+    flex-direction: row;
+    border-width: var(--border-width);
+    border-color: var(--color-tertiary);
+    border-radius: 25px;
+}
+
+.HealthBar:hover {
+    border-color: var(--color-secondary);
+}
+
+.HealthBar:active {
+    border-color: var(--color-primary);
+}
+
+.HealthContainer {
+    margin: 5px;
+    border-radius: 25px;
+}
+
+.Inactive {
+    -unity-background-image-tint-color: grey;
+    transition-duration: 0.35s, 0.5s;
+    transition-property: rotate, opacity;
+    rotate: 255deg;
+    opacity: 0.5;
+}

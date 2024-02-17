@@ -17,5 +17,5 @@ MonoBehaviour:
     _unitController: {fileID: 0}
     searchMask:
       serializedVersion: 2
-      m_Bits: 1152
-    _currentBoarState: 2
+      m_Bits: 448
+    _currentBoarState: 0

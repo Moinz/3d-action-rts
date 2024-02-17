@@ -11,7 +11,7 @@ namespace CM.Units
         
         public Statistic<float> attackSpeed;
         public Statistic<float> vision;
-
+        
         public Statistic<int> strength;
         public Statistic<int> agility;
         public Statistic<int> intelligence;
@@ -21,8 +21,10 @@ namespace CM.Units
             health = 100;
             attack = 10;
             defense = 1;
+            
             attackSpeed = 2f;
             vision = 4;
+            
             strength = 10;
             agility = 10;
             intelligence = 10;
@@ -33,8 +35,10 @@ namespace CM.Units
             health = stats.health;
             attack = stats.attack;
             defense = stats.defense;
+            
             attackSpeed = stats.attackSpeed;
             vision = stats.vision;
+            
             strength = stats.strength;
             agility = stats.agility;
             intelligence = stats.intelligence;

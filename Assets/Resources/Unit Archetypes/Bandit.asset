@@ -13,28 +13,27 @@ MonoBehaviour:
   m_Name: Bandit
   m_EditorClassIdentifier: 
   name: Bandit
+  team: 1
+  prefab: {fileID: 4849413759886070694, guid: 7c3eeec3f723b8d4bacc03ce8130743a, type: 3}
+  visuals: {fileID: 6512861142396834318, guid: f947a533acbfcb744a8f1ccfeb5ff38d, type: 3}
+  brainData: {fileID: 11400000, guid: 1adfc7cdf8dbca941a4f37c96f559e68, type: 2}
+  startingEquipment:
+  - {fileID: 5370582727116150298, guid: 69b34d585cb83b04bb77198ff1d4b825, type: 3}
+  - {fileID: 5684410931190525028, guid: 2a965d4e52a22bd4eaf0c56f21b89639, type: 3}
   statistics:
     health:
       BaseValue: 100
-      modifiers: []
     attack:
       BaseValue: 10
-      modifiers: []
     defense:
       BaseValue: 2
-      modifiers: []
     attackSpeed:
       BaseValue: 1.5
-      modifiers: []
     vision:
       BaseValue: 5
-      modifiers: []
     strength:
       BaseValue: 6
-      modifiers: []
     agility:
       BaseValue: 4
-      modifiers: []
     intelligence:
       BaseValue: 3
-      modifiers: []
