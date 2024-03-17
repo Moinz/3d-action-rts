@@ -1,4 +1,7 @@
+using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class CameraController : MonoBehaviour
 {
@@ -11,18 +14,25 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private Vector2 _bounds;
 
+
     private Camera camera;
     
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.AltGr) || Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.RightAlt))
             return;
-        
-        var forward = Vector3.forward;
-        var right = Vector3.right;
 
         if (!camera)
             camera = Camera.main;
+        
+        Move();
+        Zoom();
+    }
+
+    private void Move()
+    {
+        var forward = Vector3.forward;
+        var right = Vector3.right;
         
         var mousePos = Input.mousePosition;
         var mouseWorldPos = camera.ScreenToViewportPoint(mousePos);
@@ -48,6 +58,35 @@ public class CameraController : MonoBehaviour
         transform.position += (forward * moveY + right * moveX) * (_speed * Time.deltaTime);
         transform.position = Clamp(transform.position);
     }
+        
+    public float zoomScale = 0.01f;
+    public float currentScale = 0.5f;
+    public Vector2 fovClamp = new(45, 90);
+
+    public static float CurrentScale;
+    
+    private void Zoom()
+    {
+        var scroll = Mouse.current.scroll;
+
+        var up = scroll.up.value;
+        var down = scroll.down.value;
+        
+        if (up > 0f)
+            up = (up / 120) * zoomScale * Time.timeScale;
+        
+        if (down > 0f)
+            down = (down / 120) * (zoomScale * Time.timeScale) * -1;
+        
+        currentScale += (up + down);
+        currentScale = Mathf.Clamp01(currentScale);
+
+        var fovRange = fovClamp;
+        var newFov = map(currentScale, 0f, 1f, fovRange.x, fovRange.y);
+
+        CurrentScale = currentScale;
+        camera.fieldOfView = newFov;
+    }
 
     private Vector3 Clamp(Vector3 transformPosition)
     {
@@ -59,7 +98,7 @@ public class CameraController : MonoBehaviour
 
 
     // c#
-    float map(float s, float a1, float a2, float b1, float b2)
+    public static float map(float s, float a1, float a2, float b1, float b2)
     {
         return b1 + (s-a1)*(b2-b1)/(a2-a1);
     }

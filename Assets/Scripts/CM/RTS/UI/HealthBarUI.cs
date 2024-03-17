@@ -130,24 +130,40 @@ namespace CM.Units.RTS.UI
                 return;
 
             var root = UIDocument.rootVisualElement;
+
+            Position(root);
+            Scale(root);
+        }
+
+        private void Scale(VisualElement element)
+        {
+            var scaleFactor = (1 - CameraController.CurrentScale);
+            scaleFactor = CameraController.map(scaleFactor, 0f, 1f, 0.6f, 1f);
+            
+            var scale = Vector3.one * scaleFactor;
+            element.style.scale = new StyleScale(new Scale(scale));
+        }
+
+        private void Position(VisualElement element)
+        {
             var worldPos = HealthModule.transform.position;
+            worldPos += Camera.main.transform.up * 1f;
             
             Vector2 newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(
-                root.panel, worldPos, _camera);
+                element.panel, worldPos, _camera);
             
-            newPosition.x -= root.layout.width / 2;
-            newPosition.y -= root.layout.height / 2;
+            newPosition.x -= element.layout.width / 2;
+            newPosition.y -= element.layout.height / 2;
             
-            root.transform.position = newPosition;
+            element.transform.position = newPosition;
         }
         
-        #endregion
-
         
+        #endregion
         
         private void OnHealthBarClicked()
         {
-            HealthModule.Damage(50);
+            // Something clever here.
         }
         
         private void UpdateHealthContainer(float obj = 0)
