@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace CM.RTS.Gameplay
 {
-    public class HealthModule : MonoBehaviour
+    public class HealthModule : EntityBehavior
     {
         public ArmorModule ArmorModule = new();
         
@@ -43,13 +42,10 @@ namespace CM.RTS.Gameplay
             Debug.Log(gameObject.name + " went through armor : " + remaining, gameObject);
             _health -= remaining;
         
-            if (_health <= 0)
-            {
-                _health = MaxHealth;
-                ArmorModule.Init(CurrentOrbs, new Vector2Int(0, 3));
-            }
-        
             OnHealthChanged?.Invoke(Health);
+            
+            if (_health <= 0)
+               OnBecameDead();
         }
     
         public void Heal(float amount)
@@ -66,6 +62,11 @@ namespace CM.RTS.Gameplay
         public void Kill()
         {
             Damage(Health);
+        }
+
+        private void OnBecameDead()
+        {
+            OnDeath?.Invoke();
         }
     }
     

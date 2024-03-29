@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using CM;
 using CM.Units;
 using TMPro;
 using UnityEngine;
+using Entity = CM.Entity;
 
-public class Stockpile : Entity, IInteractable
+public class Stockpile : EntityBehavior, IInteractable
 {
     public static Dictionary<ResourceSO, Stockpile> stockpiles = new();
     public ResourceSO resource;
@@ -50,8 +52,5 @@ public class Stockpile : Entity, IInteractable
     public void Interact(UnitController unitController)
     {
         unitController._inventory.DepositResources(this);
-
-        if (IsSelected != null)
-            IsSelected.Value = false;
     }
 }

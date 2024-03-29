@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentType: 1
   attachedTo: {fileID: 0}
-  damage: 15
+  damage: 35
   attackSpeed: 1.5
   resource: {fileID: 11400000, guid: f57ec9fb4d7545f49a4e079de8842cee, type: 2}
 --- !u!54 &351772814144524966

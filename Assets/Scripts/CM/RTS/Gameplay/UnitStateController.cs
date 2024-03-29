@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CM.Units
 {
-    public partial class UnitStateController : MonoBehaviour
+    public partial class UnitStateController : EntityBehavior
     {
         private UnitController _unitController;
         public GameObject target;
@@ -29,6 +29,12 @@ namespace CM.Units
         {
             if (!_initialized)
                 return;
+
+            if (ConnectedEntity.Status.Value != EntityStatus.Alive)
+                return;
+            
+            if (target && !target.gameObject.activeInHierarchy)
+                target = null;
             
             if (_brainData)
                 _brainData.Brain.Tick();
@@ -63,14 +69,29 @@ namespace CM.Units
             PrunedAndSortedColliders = colliders.OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).ToList();
         }
         
-        public List<T> Prune<T>(List<T> list)
+        public List<T> Prune<T>(List<T> list) where T : Collider
         {
             // reverse for loop to remove items from list
             for (int i = list.Count - 1; i >= 0; i--)
             {
                 // if item is null, remove from list
                 if (list[i] == null)
-                    list.RemoveAt(i);
+                    goto removeAndContinue;
+
+                var entity = list[i].attachedRigidbody.GetComponent<Entity>();
+
+                if (!entity)
+                    goto removeAndContinue;
+                
+                // if item is owned by the same entity as us, remove from list
+                if (entity == ConnectedEntity)
+                    goto removeAndContinue;
+                
+                if (entity.Status.Value == EntityStatus.Alive)
+                    continue;
+                
+                removeAndContinue:
+                list.RemoveAt(i);
             }
 
             return list;

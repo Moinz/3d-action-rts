@@ -1,24 +1,26 @@
 ﻿using CM.Units;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 public class ScenarioController : MonoBehaviour
 {
     public UnitArchetype archetypeOne;
     public UnitArchetype archetypeTwo;
     
-    private void Start()
-    {   
-        var spawnPosition = transform.position;
-        spawnPosition.y += 0.5f;
-        
-        // Factorize this
-        var instanceOne = UnitFactory.CreateUnit(archetypeOne, spawnPosition);
-        
-        spawnPosition.x -= 2f;
+    public Transform spawnPointOne;
+    public Transform spawnPointTwo;
 
-        var instanceTwo = UnitFactory.CreateUnit(archetypeTwo, spawnPosition);
+    private void Update()
+    {
+        if (Keyboard.current.f1Key.wasPressedThisFrame)
+            SpawnUnit(archetypeOne, spawnPointOne.position);
         
-        // Set up targets. Keep it simple
-        instanceOne.target = instanceTwo.gameObject;
-        instanceTwo.target = instanceOne.gameObject;
+        if (Keyboard.current.f2Key.wasPressedThisFrame)
+            SpawnUnit(archetypeTwo, spawnPointTwo.position);
+    }
+    
+    private void SpawnUnit(UnitArchetype archetype, Vector3 position)
+    {
+        UnitFactory.CreateUnit(archetype, position);
     }
 }

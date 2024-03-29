@@ -2,6 +2,7 @@
 using Shapes;
 using TMPro;
 using UnityEngine;
+using Entity = CM.Entity;
 
 public class CraftingStation : Entity, IInteractable
 {

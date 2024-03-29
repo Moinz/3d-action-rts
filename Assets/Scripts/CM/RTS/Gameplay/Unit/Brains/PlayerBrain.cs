@@ -5,9 +5,8 @@ using UnityEngine.InputSystem;
 namespace CM.Units
 {
     [Serializable]
-    public class PlayerBrain : Brain, PlayerControls.IInteractionActions
+    public class PlayerBrain : Brain
     {
-        private PlayerControls _playerControls;
         private SelectionController _selectionController;
         
         [SerializeField]
@@ -35,30 +34,6 @@ namespace CM.Units
         {
             _stateController = stateController;
             _unitController = unitController;
-
-            _selectionController = GameObject.FindObjectOfType<SelectionController>();
-
-            _playerControls = new PlayerControls();
-            _playerControls.Enable();
-            
-            _playerControls.Interaction.SetCallbacks(this);
-            _playerControls.Interaction.Enable();
-        }
-        
-        public void OnLeftClick(InputAction.CallbackContext context)
-        {
-            if (!context.performed)
-                return;
-            
-            _selectionController.Select();
-        }
-        
-        public void OnRightClick(InputAction.CallbackContext context)
-        {
-            if (!context.performed)
-                return;
-            
-            MoveToCursor();
         }
 
 

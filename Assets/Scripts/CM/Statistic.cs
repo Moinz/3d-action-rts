@@ -1,8 +1,11 @@
 ﻿using System;
 using TriInspector;
-using UnityEditor;
-using UnityEditor.UIElements;
-using UnityEngine;
+
+#if UNITY_EDITOR
+    using UnityEditor;
+    using UnityEditor.UIElements;
+#endif
+
 using UnityEngine.UIElements;
 
 namespace CM.Units
@@ -20,6 +23,7 @@ namespace CM.Units
         }
     }
     
+#if UNITY_EDITOR
     [CustomPropertyDrawer(typeof(StatisticAttribute))]
     public class StatisticAttributeDrawer : PropertyDrawer
     {
@@ -36,6 +40,7 @@ namespace CM.Units
             return container;
         }
     }
+#endif
     
     [Serializable]
     [DeclareHorizontalGroup("Statistics")]

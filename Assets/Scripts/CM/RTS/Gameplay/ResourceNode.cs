@@ -1,11 +1,12 @@
-﻿using CM.RTS.Gameplay;
+﻿using CM;
+using CM.RTS.Gameplay;
 using CM.Units;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 [RequireComponent(typeof(HealthModule))]
-public class ResourceNode : Entity, IInteractable
+public class ResourceNode : EntityBehavior, IInteractable
 {
     [SerializeField]
     private Vector2Int _resourceRange = new (1,3);
@@ -48,9 +49,6 @@ public class ResourceNode : Entity, IInteractable
             
             ResourceFactory.Throw(resource.gameObject, RandomPointInCircle(pos, 2.5f));
         }
-        
-        if (IsSelected != null)
-            IsSelected.Value = false;
     }
     
     // TODO: Move this to a utility class.

@@ -36,8 +36,10 @@ namespace CM.Units
         {
             yield return null;
 
-            while (_agent.remainingDistance > .25f)
+            while (_agent.remainingDistance > .05f)
             {
+                ChangeOrientation();
+                
                 yield return null;
             }
 
@@ -48,6 +50,17 @@ namespace CM.Units
         public bool IsMoving()
         {
             return _agent.velocity.magnitude > 0;
+        }
+
+        public void ChangeOrientation()
+        {
+            if (_agent.velocity.magnitude > 0)
+            {
+                var direction = _agent.velocity.normalized;
+                var lookRotation = Quaternion.LookRotation(direction);
+                
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10);
+            }
         }
     }
 }

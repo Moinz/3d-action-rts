@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 namespace CM.Units
 {
     [Serializable]
-    public class SelectionController : ImmediateModeShapeDrawer
+    public class SelectionController : ImmediateModeShapeDrawer, PlayerControls.IInteractionActions
     {
         private int _hits;
         private RaycastHit[] _rayCastHits = new RaycastHit[10];
@@ -18,6 +18,38 @@ namespace CM.Units
         private ISelectable _selected;
         public ISelectable Selected => _selected;
         public bool HasSelection => _selected != null;
+
+        private PlayerControls _playerControls;
+
+        private void Start()
+        {
+            Init();
+        }
+
+        private void Init()
+        {
+            _playerControls = new PlayerControls();
+            _playerControls.Enable();
+            
+            _playerControls.Interaction.SetCallbacks(this);
+            _playerControls.Interaction.Enable();
+        }
+        
+        public void OnLeftClick(InputAction.CallbackContext context)
+        {
+            if (!context.performed)
+                return;
+            
+            Select();
+        }
+        
+        public void OnRightClick(InputAction.CallbackContext context)
+        {
+            if (!context.performed)
+                return;
+            
+            Deselect();
+        }
 
         public void Select()
         {
@@ -32,7 +64,7 @@ namespace CM.Units
 
             // Select new
             _selected = bestCandidate;
-            _selected.IsSelected.Value = true;
+            _selected.SetSelected(true);
             _selected.IsSelected.OnValueChanged += OnSelectedChanged;
         }
 
@@ -41,7 +73,7 @@ namespace CM.Units
             if (_selected == null)
                 return;
 
-            _selected.IsSelected.Value = false;
+            _selected.SetSelected(false);
         }
 
         private void OnSelectedChanged(bool newValue)
@@ -67,7 +99,7 @@ namespace CM.Units
         {
             bestCandidate = null;
             var selectables = GetSelectables(_hits, _rayCastHits)
-                .OrderBy<ISelectable, float>(x => Vector3.Distance(x.Rigidbody.position, _rayCastHits[0].point))
+                .OrderBy(x => Vector3.Distance(x.Rigidbody.position, _rayCastHits[0].point))
                 .ToArray();
 
             var hasSelectable = selectables.Length > 0;
@@ -94,7 +126,6 @@ namespace CM.Units
                 if (iSelectable == null)
                     continue;
 
-                iSelectable.IsSelected = new Observable<bool>(false);
                 iSelectable.Rigidbody = rb;
                 selectables.Add(iSelectable);
             }

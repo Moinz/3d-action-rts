@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace CM.Units
 {
@@ -24,5 +25,17 @@ namespace CM.Units
         public abstract void Tick();
         
         public abstract void Initialize(UnitStateController stateController, UnitController unitController);
+    }
+
+    public static class BrainExtensions
+    {
+        
+        internal static Vector3 RandomPointInCircle(Vector3 center, float radius)
+        {
+            var point = Random.insideUnitCircle * radius;
+        
+            return center + new Vector3(point.x, 0f, point.y);
+        }
+
     }
 }

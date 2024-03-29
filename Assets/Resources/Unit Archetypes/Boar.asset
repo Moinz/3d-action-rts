@@ -21,18 +21,18 @@ MonoBehaviour:
   - {fileID: 6793844655204303081, guid: 2888ece6ed7afc94d80e4b543d23f25f, type: 3}
   statistics:
     health:
-      BaseValue: 200
+      BaseValue: 300
     attack:
-      BaseValue: 30
+      BaseValue: 90
     defense:
-      BaseValue: 1
+      BaseValue: 5
     attackSpeed:
-      BaseValue: 3
+      BaseValue: 4
     vision:
-      BaseValue: 3
+      BaseValue: 2
     strength:
-      BaseValue: 10
+      BaseValue: 15
     agility:
-      BaseValue: 3
+      BaseValue: 8
     intelligence:
       BaseValue: 1

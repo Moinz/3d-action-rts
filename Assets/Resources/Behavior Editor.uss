@@ -1,0 +1,25 @@
+/* BehaviorGraph.uss */
+
+/* Style for the GraphView */
+.GraphView {
+    background-color: #2a2a2a;
+}
+
+/* Style for the nodes */
+.Node {
+    color: white;
+    background-color: #3a3a3a;
+    border-color: #4a4a4a;
+    border-width: 2px;
+}
+
+/* Style for the ports */
+.Port {
+    color: white;
+    background-color: #4a4a4a;
+}
+
+/* Style for the edges */
+.Edge {
+    color: white;
+}

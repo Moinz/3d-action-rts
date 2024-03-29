@@ -1,7 +1,8 @@
+using CM;
 using CM.Units;
 using UnityEngine;
 
-public class Equipment : Entity, IInteractable
+public class Equipment : EntityBehavior, IInteractable
 {
     public Attachment.Enum_AttachmentType attachmentType;
     public Attachment attachedTo;

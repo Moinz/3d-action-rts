@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7957179590808226037}
+  - component: {fileID: 5531875080493682957}
+  - component: {fileID: 3748833602029440191}
   - component: {fileID: 2689773369605086232}
   - component: {fileID: 2248233038122663747}
-  - component: {fileID: 3748833602029440191}
   m_Layer: 6
   m_Name: Rock Node
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2689773369605086232
+--- !u!114 &5531875080493682957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,25 +44,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2377764269942780425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e0286a5cbb412cbe4d600d68f65d7c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3e9197c27fd4a44c992a6ed964d2f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 60
---- !u!114 &2248233038122663747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2377764269942780425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f131cd6464cc410b957263cd57fce5d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _resourceRange: {x: 1, y: 3}
-  _resourceSO: {fileID: 11400000, guid: 94c20209b680d804ebe0e763f289a7c8, type: 2}
-  _healthModule: {fileID: 2689773369605086232}
 --- !u!54 &3748833602029440191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,3 +63,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2689773369605086232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377764269942780425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e0286a5cbb412cbe4d600d68f65d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 60
+  HealthPointsPerOrb: 30
+--- !u!114 &2248233038122663747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377764269942780425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f131cd6464cc410b957263cd57fce5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedEntity: {fileID: 0}
+  _resourceRange: {x: 1, y: 3}
+  _resourceSO: {fileID: 11400000, guid: 94c20209b680d804ebe0e763f289a7c8, type: 2}
+  _healthModule: {fileID: 2689773369605086232}

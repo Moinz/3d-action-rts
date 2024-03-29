@@ -1,29 +1,11 @@
 ﻿using System;
 using CM.RTS.Gameplay;
-using UnityEditor;
+    
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-using Cursor = UnityEngine.Cursor;
-using Random = UnityEngine.Random;
 
 namespace CM.Units.RTS.UI
 {
-    [CustomEditor(typeof(HealthBarUI))]
-    public class HealthBarUIEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            
-            if (GUILayout.Button("Construct Healthbar Hierarchy"))
-            {
-                var healthBarUI = (HealthBarUI) target;
-                healthBarUI.ConstructHealthbarHierarchy();
-            }
-        }
-    }
-    
     public class HealthBarElement : VisualElement
     {
         public new class UxmlFactory : UxmlFactory<HealthBarElement, UxmlTraits> { }
@@ -40,7 +22,7 @@ namespace CM.Units.RTS.UI
         }
     }
     
-    public class HealthBarUI : MonoBehaviour
+    public class HealthBarUI : EntityBehavior
     {
         public UIDocument UIDocument;
         public HealthModule HealthModule;
@@ -50,33 +32,37 @@ namespace CM.Units.RTS.UI
         private Camera _camera;
 
         #region Initialization
-
-        private void Start()
-        {   
-            _camera = Camera.main;
-        }
-
+        
         private void Init()
         {
             _initialized = true;
             
+            HealthModule.OnHealthChanged += UpdateHealthContainer;
+            HealthModule.ArmorModule.OnArmorChanged += UpdateHealthContainer;
+            
+            _camera = Camera.main;
             UIDocument.rootVisualElement.Clear();
             
             _healthBar = new HealthBarElement(OnHealthBarClicked);
             UIDocument.rootVisualElement.Add(_healthBar);
-       }
-        
-        public void ConstructHealthbarHierarchy()
-        {
-            Init();
             
             ConstructHealthOrbs();
             ConstructArmorShards();
+       }
+        
+        private void Pool()
+        {
+            _initialized = false;
+            
+            HealthModule.OnHealthChanged -= UpdateHealthContainer;
+            HealthModule.ArmorModule.OnArmorChanged -= UpdateHealthContainer;
+            
+            UIDocument.rootVisualElement.Clear();
         }
         
         private void ConstructHealthOrbs()
         {
-            var health = HealthModule.MaxHealthOrbs;
+            var health = HealthModule.CurrentOrbs;
             
             for (int i = 0; i < health; i++)
             {
@@ -112,18 +98,24 @@ namespace CM.Units.RTS.UI
         
         private void OnEnable()
         {
-            HealthModule.OnHealthChanged += UpdateHealthContainer;
-            HealthModule.ArmorModule.OnArmorChanged += UpdateHealthContainer;
-            
-            ConstructHealthbarHierarchy();
+            ConnectedEntity.RegisterSelectionCallback(OnSelected);   
+         
+            OnSelected(false);
         }
 
         private void OnDisable()
         {
-            HealthModule.OnHealthChanged -= UpdateHealthContainer;
-            HealthModule.ArmorModule.OnArmorChanged -= UpdateHealthContainer;
+            ConnectedEntity.UnregisterSelectionCallback(OnSelected);
         }
-        
+
+        private void OnSelected(bool obj)
+        {
+            if (obj)
+                Init();
+            else
+                Pool();
+        }
+
         private void Update()
         {
             if (!_initialized)

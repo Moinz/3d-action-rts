@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace CM.Units
 {
-    public partial class UnitController : MonoBehaviour
+    public partial class UnitController : EntityBehavior
     {
         private UnitLocomotion _unitLocomotion;
 
         [SerializeField] 
         private Attachment[] _attachments;
-
-        private HealthModule _healthModule;
+        
         internal Inventory _inventory;
         public Action<GameObject> Attack;
         
@@ -19,34 +18,24 @@ namespace CM.Units
         {
             _archetype = archetype;
             team = archetype.team;
-            
-            _healthModule = GetComponent<HealthModule>();
 
             _inventory = GetComponent<Inventory>();
             _attachments = GetComponentsInChildren<Attachment>();
             
             _statistics = new UnitStatistics(_archetype.statistics);
             _unitLocomotion = GetComponent<UnitLocomotion>();
-        }
-        
-
-        private void OnEnable()
-        {
-            if (_healthModule)
-                _healthModule.OnDeath += OnDeath;
+            
+            ConnectedEntity.Status.OnValueChanged += OnStatusChanged;
         }
 
-        private void OnDisable()
+        private void OnStatusChanged(EntityStatus obj)
         {
-            if (_healthModule)
-                _healthModule.OnDeath -= OnDeath;
+            if (obj == EntityStatus.Dead)
+                OnDeath();
         }
 
         private void OnDeath()
         {
-            if (_inventory)
-                _inventory.EjectInventory();
-
             gameObject.SetActive(false);
         }
     }

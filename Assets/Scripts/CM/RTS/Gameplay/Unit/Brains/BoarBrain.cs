@@ -1,4 +1,5 @@
 ﻿using System;
+using TriInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,7 @@ namespace CM.Units
         private float DistanceToTarget => Vector3.Distance(_unitController.transform.position, Target.transform.position);
         private bool IsTargetInRange => DistanceToTarget < _unitController.interactRange;
 
+        [ShowInInspector]
         private float _timeUntilNextWander;
 
         public override void Initialize(UnitStateController stateController, UnitController unitController)
@@ -23,6 +25,7 @@ namespace CM.Units
             
             _originalPosition = _unitController.transform.position;
             _currentBoarState = BoarStates.Patrol;
+            _timeUntilNextWander = Time.time + Random.Range(3f, 6f);
         }
 
         private enum BoarStates
@@ -32,7 +35,7 @@ namespace CM.Units
             Attacking,
         }
 
-        [SerializeField]
+        [ShowInInspector]
         private BoarStates _currentBoarState;
 
         public override void Tick()
@@ -140,7 +143,7 @@ namespace CM.Units
                 return;
             
             var pos = _originalPosition;
-            var randomPos = RandomPointInCircle(pos, 3f);
+            var randomPos = BrainExtensions.RandomPointInCircle(pos, 3f);
             
             _unitController.MoveTo(randomPos, OnArrived);
             _currentBoarState = BoarStates.Approach;
@@ -149,14 +152,6 @@ namespace CM.Units
         private void OnArrived()
         {
             _currentBoarState = BoarStates.Patrol;
-        }
-        
-        // TODO: Move this to a utility class.
-        private Vector3 RandomPointInCircle(Vector3 center, float radius)
-        {
-            var point = Random.insideUnitCircle * radius;
-        
-            return center + new Vector3(point.x, 0f, point.y);
         }
 
     }

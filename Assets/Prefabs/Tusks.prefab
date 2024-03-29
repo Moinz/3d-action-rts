@@ -245,8 +245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentType: 1
   attachedTo: {fileID: 0}
-  damage: 30
-  attackSpeed: 3
+  damage: 90
+  attackSpeed: 4
   resource: {fileID: 0}
 --- !u!54 &2826442891990057710
 Rigidbody:

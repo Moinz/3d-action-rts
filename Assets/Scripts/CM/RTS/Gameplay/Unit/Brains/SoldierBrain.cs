@@ -1,5 +1,7 @@
 ﻿using System;
+using TriInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace CM.Units
 {
@@ -15,7 +17,13 @@ namespace CM.Units
             Attacking,
         }
 
+        [ShowInInspector]
         private CombatStates _currentCombatState;
+
+        [ShowInInspector]
+        private float _timeUntilNextWander;
+        
+        private Vector3 _originalPosition;
 
         public override void Tick()
         {
@@ -35,7 +43,7 @@ namespace CM.Units
 
         private void Attack()
         {
-            if (!_stateController.target)
+            if (!Target)
             {
                 _currentCombatState = CombatStates.Patrol;
                 return;
@@ -46,6 +54,12 @@ namespace CM.Units
 
         private void Approach()
         {
+            if (!Target)
+            {
+                _currentCombatState = CombatStates.Patrol;
+                return;
+            }
+            
             var targetPos = Target.transform.position;
             var distance = Vector3.Distance(_stateController.transform.position, targetPos);
 
@@ -61,15 +75,48 @@ namespace CM.Units
             _stateController.Query_PerformSearch(searchMask);
 
             if (_stateController.PrunedAndSortedColliders.Count == 0)
+            {
+                Wander();
                 return;
+            }
             
             SelectTarget();
-            
+
             if (!Target)
+            {
+                Wander();
                 return;
+            }
 
             _unitController.MoveTo(Target.transform.position);
             _currentCombatState = CombatStates.Approach;
+        }
+
+        
+        private bool CanWander()
+        {
+            if (_timeUntilNextWander > Time.time)
+                return false;
+            
+            _timeUntilNextWander = Time.time + Random.Range(3f, 6f);
+            return true;
+        }
+        
+        private void Wander()
+        {
+            if (!CanWander())
+                return;
+            
+            var pos = _originalPosition;
+            var randomPos = BrainExtensions.RandomPointInCircle(pos, 3f);
+            
+            _unitController.MoveTo(randomPos, OnArrived);
+            _currentCombatState = CombatStates.Patrol;
+        }
+
+        private void OnArrived()
+        {
+            
         }
 
         private void SelectTarget()
@@ -96,6 +143,9 @@ namespace CM.Units
         {
             _stateController = stateController;
             _unitController = unitController;
+            
+            _originalPosition = _stateController.transform.position;
+            _timeUntilNextWander = Time.time + Random.Range(3f, 6f);
         }
     }
 }

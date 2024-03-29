@@ -1,7 +1,5 @@
-using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class CameraController : MonoBehaviour
 {
@@ -24,9 +22,26 @@ public class CameraController : MonoBehaviour
 
         if (!camera)
             camera = Camera.main;
+
+        if (!IsWithinScreen())
+            return;
         
         Move();
         Zoom();
+    }
+
+    private bool IsWithinScreen()
+    {
+        var mousePos = Input.mousePosition;
+        var mouseWorldPos = camera.ScreenToViewportPoint(mousePos);
+        
+        if (mouseWorldPos.x > 1f || mouseWorldPos.x < 0f)
+            return false;
+        
+        if (mouseWorldPos.y	> 1f || mouseWorldPos.y < 0f)
+            return false;
+
+        return true;
     }
 
     private void Move()

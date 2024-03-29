@@ -2431,6 +2431,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284830218}
   m_Mesh: {fileID: -7513297493162946847, guid: f39fcc1e328029640bf184a353ebf123, type: 3}
+--- !u!1 &298247353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298247354}
+  m_Layer: 0
+  m_Name: Spawnpoint Two
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &298247354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298247353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1971810642}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315150118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7749,6 +7780,7 @@ GameObject:
   - component: {fileID: 875071760}
   - component: {fileID: 875071762}
   - component: {fileID: 875071761}
+  - component: {fileID: 875071763}
   m_Layer: 0
   m_Name: Crafting Station (Shield)
   m_TagString: Untagged
@@ -7805,6 +7837,20 @@ MonoBehaviour:
   _textMeshPro: {fileID: 544303987}
   _regularPolygon: {fileID: 1299064644}
   _craftingDefinition: {fileID: 11400000, guid: 5179a40d42fa37b4d93787eb210a0ff6, type: 2}
+--- !u!114 &875071763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875071759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e0286a5cbb412cbe4d600d68f65d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
+  HealthPointsPerOrb: 30
 --- !u!1 &877952181
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,6 +9413,37 @@ MonoBehaviour:
   - {fileID: 1484741135}
   - {fileID: 902381266}
   - {fileID: 2145096942}
+--- !u!1 &1041755081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041755082}
+  m_Layer: 0
+  m_Name: Spawnpoint One
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041755082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041755081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1971810642}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059956158
 GameObject:
   m_ObjectHideFlags: 0
@@ -15094,6 +15171,7 @@ GameObject:
   - component: {fileID: 1697597166}
   - component: {fileID: 1697597168}
   - component: {fileID: 1697597167}
+  - component: {fileID: 1697597169}
   m_Layer: 0
   m_Name: Crafting Station (Axe)
   m_TagString: Untagged
@@ -15150,6 +15228,20 @@ MonoBehaviour:
   _textMeshPro: {fileID: 1096048298}
   _regularPolygon: {fileID: 833161101}
   _craftingDefinition: {fileID: 11400000, guid: d62b87ceadff02542b8449410134b08e, type: 2}
+--- !u!114 &1697597169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697597165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e0286a5cbb412cbe4d600d68f65d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
+  HealthPointsPerOrb: 30
 --- !u!1 &1698356316
 GameObject:
   m_ObjectHideFlags: 0
@@ -18008,7 +18100,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1041755082}
+  - {fileID: 298247354}
   m_Father: {fileID: 1902848459}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18026,6 +18120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   archetypeOne: {fileID: 11400000, guid: ed0228ad9658cb940aefd8bc9d0bd49e, type: 2}
   archetypeTwo: {fileID: 11400000, guid: 8047d51bb760c0a4a95c5ff3d7579e34, type: 2}
+  spawnPointOne: {fileID: 1041755082}
+  spawnPointTwo: {fileID: 298247354}
 --- !u!1 &1978800594
 GameObject:
   m_ObjectHideFlags: 0
@@ -18136,6 +18232,23 @@ MonoBehaviour:
     rightPosition: {x: 7, y: 8}
     downPosition: {x: 6, y: 7}
     leftPosition: {x: 5, y: 8}
+--- !u!1 &1985326720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5158945168472289723, guid: f54136b402e613340b6986235ec20027, type: 3}
+  m_PrefabInstance: {fileID: 1367557137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1985326725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985326720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e9197c27fd4a44c992a6ed964d2f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998716097
 GameObject:
   m_ObjectHideFlags: 0
@@ -18330,6 +18443,7 @@ GameObject:
   - component: {fileID: 2030841221}
   - component: {fileID: 2030841223}
   - component: {fileID: 2030841222}
+  - component: {fileID: 2030841224}
   m_Layer: 0
   m_Name: Crafting Station (Sword)
   m_TagString: Untagged
@@ -18386,6 +18500,20 @@ MonoBehaviour:
   _textMeshPro: {fileID: 1254927637}
   _regularPolygon: {fileID: 1600566832}
   _craftingDefinition: {fileID: 11400000, guid: 89590ec5e427d2a4e88b9d416e9972f0, type: 2}
+--- !u!114 &2030841224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030841220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e0286a5cbb412cbe4d600d68f65d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
+  HealthPointsPerOrb: 30
 --- !u!1 &2045136820
 GameObject:
   m_ObjectHideFlags: 0
